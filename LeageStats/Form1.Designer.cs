@@ -40,6 +40,7 @@ namespace LeageStats
             this.InputPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.InputPanel.SuspendLayout();
@@ -155,6 +156,7 @@ namespace LeageStats
             // InputPanel
             // 
             this.InputPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.InputPanel.Controls.Add(this.webBrowser1);
             this.InputPanel.Controls.Add(this.panel3);
             this.InputPanel.Controls.Add(this.SRegion);
             this.InputPanel.Controls.Add(this.search);
@@ -183,6 +185,15 @@ namespace LeageStats
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 1);
             this.panel1.TabIndex = 5;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(151, 157);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
+            this.webBrowser1.TabIndex = 8;
+            this.webBrowser1.Visible = false;
             // 
             // Form1
             // 
@@ -218,6 +229,7 @@ namespace LeageStats
         private System.Windows.Forms.Panel InputPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

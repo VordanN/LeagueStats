@@ -52,25 +52,24 @@ namespace LeageStats.API
 
             Participant1 participants = new Participant1();
             if (File.Exists(@"Matches\"+Constants.Summoner.Id+@"\"+ matchId))
-            {
+                 {
                 participants = ReadWrite.ReadJson<Root>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId).info.participants.Where(p => p.puuid.Equals(Constants.Summoner.Puuid)).FirstOrDefault();
             }
             else
             {
-                using (WebClient w = new WebClient())
+                HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                doc.LoadHtml(GetURL(path, true));
+                ReadWrite.WriteJson(doc.ToString(),"text.txt");
+               Root d = JsonConvert.DeserializeObject<Root>(doc.Text);
+                foreach (Participant1 item in d.info.participants)
                 {
-                    var json = w.DownloadString(GetURL(path,true));
-                    Root d = JsonConvert.DeserializeObject<Root>(json);
-                    foreach (Participant1 item in d.info.participants)
+                    if (item.puuid == Constants.Summoner.Puuid)
                     {
-                        if (item.puuid == Constants.Summoner.Puuid)
-                        {
-                            participants = item;
-                            break;
-                        }
+                        participants = item;
+                        break;
                     }
-                    ReadWrite.WriteJson(d, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
                 }
+                ReadWrite.WriteJson(d, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
             }
 
 
