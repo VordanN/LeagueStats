@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LeageStats.Utilits;
+using FileSystem;
+using System.IO;
 
 namespace LeageStats
 {
@@ -24,7 +26,11 @@ namespace LeageStats
         {
             controller = new ControllerMain();
             InitializeComponent();
-           
+            string[] summoners = Directory.GetFiles(@"Info\Summoners\");
+            foreach (string summonerDIR in summoners)
+            {
+                comboBox1.Items.Add(ReadWrite.ReadJson<SummonerDTO>(summonerDIR).Name);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,51 +40,30 @@ namespace LeageStats
 
 
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SummonerRegion = (string)SRegion.Items[SRegion.SelectedIndex];
-        }
-
-        private void BlockText(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
-
-        private void SName_TextChanged(object sender, EventArgs e)
-        {
-            SummonerName = SName.Text;
-        }
-
         private void search_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(SummonerRegion))
-                return;
-            if (string.IsNullOrEmpty(SummonerName))
+            SummonerName = comboBox1.Text;
+            SummonerRegion = SRegion.SelectedItem.ToString();
+            if (string.IsNullOrEmpty(SummonerRegion) || string.IsNullOrEmpty(SummonerName))
                 return;
 
-            if (controller.GetSummener(SummonerRegion,SummonerName))
+            if (File.Exists(@"Info\Summoners\" + SummonerName + ".json"))
             {
-
-                Form2 form2 = new Form2();
-                Hide();
-                form2.Show();
-                
+                Constants.Summoner = ReadWrite.ReadJson<SummonerDTO>(@"Info\Summoners\" + SummonerName + ".json");
+            }
+            else if (controller.GetSummener(SummonerRegion, SummonerName))
+            {
+                ReadWrite.WriteJson(Constants.Summoner, @"Info\Summoners\" + SummonerName + ".json");
             }
             else
             {
-                MessageBox.Show("Not Found");
+                MessageBox.Show("Not Found/API out of date","EROR");
+                return;
             }
-            
+            Form2 form2 = new Form2();
+            Hide();
+            form2.Show();
         }
 
-        private void InputPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

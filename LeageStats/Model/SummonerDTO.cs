@@ -8,6 +8,7 @@ namespace LeageStats.API
 {
     public class SummonerDTO
     {
+        public string Region { get; set; }
         public string AccountId { get; set; }
         public int ProfileIconId { get; set; }
         public long RevisionDate { get; set; }

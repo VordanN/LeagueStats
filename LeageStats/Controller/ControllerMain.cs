@@ -18,7 +18,8 @@ namespace LeageStats.Controller
             var summoner = summoner_V4.GetSummonerByName(summonerName);
 
             Constants.Summoner = summoner;
-            Constants.Region = region;
+            Constants.Summoner.Region = region;
+            
             return summoner != null;
         }
     }

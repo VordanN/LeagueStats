@@ -1,22 +1,12 @@
 ﻿using FileSystem;
 using LeageStats.Model;
-using LeageStats.Model.Match;
 using LeageStats.Utilits;
-using MessagePack;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using RiotNet;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 
 
@@ -30,15 +20,15 @@ namespace LeageStats.API
         }
 
 
-        
-        public MatchDto Read(string matchId)
+
+        public Root Read(string matchId)
         {
             using (BinaryReader reader = new BinaryReader(File.Open(@"Matches\" + Constants.Summoner.Id + @"\" + matchId, FileMode.Open)))
             {
                 byte[] bytes = reader.ReadBytes(int.Parse(reader.BaseStream.Length.ToString()));
-                return Utf8Json.JsonSerializer.Deserialize<MatchDto>(bytes);
+                return Utf8Json.JsonSerializer.Deserialize<Root>(bytes);
             }
-            
+
         }
 
         public ModelStat GetModelSat(string matchId)
@@ -51,8 +41,8 @@ namespace LeageStats.API
             string path = "match/v5/matches/" + matchId;
 
             Participant1 participants = new Participant1();
-            if (File.Exists(@"Matches\"+Constants.Summoner.Id+@"\"+ matchId))
-                 {
+            if (File.Exists(@"Matches\" + Constants.Summoner.Id + @"\" + matchId))
+            {
                 participants = ReadWrite.ReadJson<Root>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId).info.participants.Where(p => p.puuid.Equals(Constants.Summoner.Puuid)).FirstOrDefault();
             }
             else
@@ -110,16 +100,16 @@ namespace LeageStats.API
             }
         }
 
-        public List<MatchDto> GetMatchesByPuid(string puuid,int start = 0,int count = 20)
+        public List<MatchDto> GetMatchesByPuid(string puuid, int start = 0, int count = 20)
         {
             List<MatchDto> matchDtos = new List<MatchDto>();
-            foreach (string match in GetMatchIDs(puuid,start,count))
+            foreach (string match in GetMatchIDs(puuid, start, count))
             {
                 matchDtos.Add(GetMatchByMatchIDAsync(match));
             }
-            
+
             return matchDtos;
-            
+
         }
         public List<string> GetMatchIDs(string puuid, int start = 0, int count = 20)
         {
@@ -130,7 +120,7 @@ namespace LeageStats.API
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return  JsonConvert.DeserializeObject<List<string>>(context);
+                return JsonConvert.DeserializeObject<List<string>>(context);
             }
             else { return null; }
         }

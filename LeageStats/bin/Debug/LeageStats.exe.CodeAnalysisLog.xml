@@ -12,7 +12,7 @@
          <Members>
           <Member Name="#WriteJson(System.Object,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-01 09:15:56Z" FixCategory="DependsOnFix">
+            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-01 21:12:56Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats" File="FileSystem.cs" Line="18">Объект "'fs'" можно удалять более одного раза в методе 'ReadWrite.WriteJson(object, string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 18</Issue>
             </Message>
            </Messages>
@@ -27,8 +27,8 @@
          <Members>
           <Member Name="#GetModelSat(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-01 09:15:56Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\API" File="Match_V5.cs" Line="66">Объект "'stream'" можно удалять более одного раза в методе 'Match_V5.GetModelSat(string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 66</Issue>
+            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-01 21:12:56Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\API" File="Match_V5.cs" Line="56">Объект "'stream'" можно удалять более одного раза в методе 'Match_V5.GetModelSat(string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 56</Issue>
             </Message>
            </Messages>
           </Member>
@@ -45,7 +45,7 @@
   <Rule TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202">
    <Name>Не ликвидировать объекты несколько раз</Name>
    <Description>Правильно реализованный метод Dispose может вызываться неоднократно без создания исключения. Однако такой гарантии нет, и чтобы предотвратить создание System.ObjectDisposedException, не следует вызывать метод Dispose для объекта более одного раза.</Description>
-   <Resolution Name="Default">Объект "{0}" можно удалять более одного раза в методе {1}. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 66</Resolution>
+   <Resolution Name="Default">Объект "{0}" можно удалять более одного раза в методе {1}. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 56</Resolution>
    <Owner>RuleOwner</Owner>
    <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
    <Email />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MessagePack;
+
 namespace LeageStats.Model.Match
 {
     public class Style

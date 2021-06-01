@@ -20,7 +20,7 @@ namespace LeageStats.Controller
 
         private LeagueEntryDTO GetPosition(SummonerDTO summoner)
         {
-            League_V4 league = new League_V4(Constants.Region);
+            League_V4 league = new League_V4(Constants.Summoner.Region);
 
             var position = league.GetLeagueEntryDTOs(summoner.Id).Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
 

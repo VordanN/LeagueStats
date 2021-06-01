@@ -40,7 +40,7 @@ namespace LeageStats
             Losses.Text = Convert.ToString(model.Losses);
             SLvL.Text = Convert.ToString(model.Level);
 
-            match = new Match_V5(Constants.Region);
+            match = new Match_V5(Constants.Summoner.Region);
             //RU_329377877
 
             List<string> m = match.GetMatchIDs(Constants.Summoner.Puuid);

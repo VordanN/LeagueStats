@@ -31,16 +31,15 @@ namespace LeageStats
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.SNameLable = new System.Windows.Forms.Label();
-            this.SName = new System.Windows.Forms.TextBox();
             this.SRegion = new System.Windows.Forms.ComboBox();
             this.SServerLable = new System.Windows.Forms.Label();
             this.search = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.InputPanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainPanel.SuspendLayout();
             this.InputPanel.SuspendLayout();
@@ -56,19 +55,6 @@ namespace LeageStats
             this.SNameLable.Size = new System.Drawing.Size(70, 28);
             this.SNameLable.TabIndex = 0;
             this.SNameLable.Text = "Name:";
-            // 
-            // SName
-            // 
-            this.SName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.SName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SName.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SName.ForeColor = System.Drawing.Color.Black;
-            this.SName.Location = new System.Drawing.Point(5, 123);
-            this.SName.MaxLength = 39;
-            this.SName.Name = "SName";
-            this.SName.Size = new System.Drawing.Size(330, 28);
-            this.SName.TabIndex = 1;
-            this.SName.TextChanged += new System.EventHandler(this.SName_TextChanged);
             // 
             // SRegion
             // 
@@ -96,8 +82,6 @@ namespace LeageStats
             this.SRegion.Size = new System.Drawing.Size(340, 29);
             this.SRegion.Sorted = true;
             this.SRegion.TabIndex = 3;
-            this.SRegion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.SRegion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BlockText);
             // 
             // SServerLable
             // 
@@ -151,24 +135,30 @@ namespace LeageStats
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(350, 500);
             this.MainPanel.TabIndex = 7;
-            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
             // InputPanel
             // 
             this.InputPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.InputPanel.Controls.Add(this.webBrowser1);
+            this.InputPanel.Controls.Add(this.panel1);
             this.InputPanel.Controls.Add(this.panel3);
+            this.InputPanel.Controls.Add(this.comboBox1);
             this.InputPanel.Controls.Add(this.SRegion);
             this.InputPanel.Controls.Add(this.search);
             this.InputPanel.Controls.Add(this.SServerLable);
-            this.InputPanel.Controls.Add(this.SName);
             this.InputPanel.Controls.Add(this.SNameLable);
             this.InputPanel.Location = new System.Drawing.Point(0, 140);
             this.InputPanel.Margin = new System.Windows.Forms.Padding(10, 20, 0, 0);
             this.InputPanel.Name = "InputPanel";
             this.InputPanel.Size = new System.Drawing.Size(350, 312);
             this.InputPanel.TabIndex = 7;
-            this.InputPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.InputPanel_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(3, 158);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(340, 1);
+            this.panel1.TabIndex = 5;
             // 
             // panel3
             // 
@@ -178,22 +168,19 @@ namespace LeageStats
             this.panel3.Size = new System.Drawing.Size(340, 1);
             this.panel3.TabIndex = 5;
             // 
-            // panel1
+            // comboBox1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(45, 324);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 1);
-            this.panel1.TabIndex = 5;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(151, 157);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser1.TabIndex = 8;
-            this.webBrowser1.Visible = false;
+            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.Location = new System.Drawing.Point(3, 129);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(340, 29);
+            this.comboBox1.Sorted = true;
+            this.comboBox1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -202,7 +189,6 @@ namespace LeageStats
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(10)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(434, 561);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainPanel);
             this.Font = new System.Drawing.Font("Malgun Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -220,7 +206,6 @@ namespace LeageStats
         #endregion
 
         private System.Windows.Forms.Label SNameLable;
-        private System.Windows.Forms.TextBox SName;
         private System.Windows.Forms.ComboBox SRegion;
         private System.Windows.Forms.Label SServerLable;
         private System.Windows.Forms.Button search;
@@ -229,7 +214,7 @@ namespace LeageStats
         private System.Windows.Forms.Panel InputPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
