@@ -18,13 +18,20 @@ namespace LeageStats
 {
     public partial class MatchView : UserControl
     {
-
+        private Image GetImage(string filleName,string url= "")
+        {
+            if (File.Exists(filleName))
+            {
+                return Image.FromFile(filleName);
+            }
+            return DownloadImage(url);
+        }
         public MatchView(ModelStat participant)
         {
             InitializeComponent();
-            
-            CharecterIcon.Image = DownloadImage("https://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/" + participant.championName + ".png");
-            
+
+            CharecterIcon.Image = GetImage(@"SummonerIcons\" + participant.championName + ".png", "https://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/"+participant.championName+".png");
+
             CharecterName.Text = participant.championName;
             Level.Text = participant.champLevel.ToString();
             kda.Text = participant.kills + "/" + participant.deaths + "/" + participant.assists;
@@ -34,9 +41,8 @@ namespace LeageStats
             
             moneyernerd.Text = Math.Round((decimal)participant.goldEarned/1000,1)+"k";
             cs.Text = (participant.neutralMinionsKilled+participant.totalMinionsKilled).ToString();
-            Spell1.Image = DownloadImage("https://ddragon.leagueoflegends.com/cdn/11.8.1/img/spell/" + ConvertToSummonerSpell(participant.summoner1Id) + ".png");
-            Spell2.Image = DownloadImage("https://ddragon.leagueoflegends.com/cdn/11.8.1/img/spell/" + ConvertToSummonerSpell(participant.summoner2Id) + ".png");
-
+            Spell1.Image = Image.FromFile(@"SummonerSpells\" +participant.summoner1Id + ".png");
+            Spell2.Image = Image.FromFile(@"SummonerSpells\" + participant.summoner2Id + ".png");
             chechItem(ref pictureBox1,participant.item0);
             chechItem(ref pictureBox2,participant.item1);
             chechItem(ref pictureBox3,participant.item2);
@@ -49,14 +55,14 @@ namespace LeageStats
         {
             if (item != 0)
             {
-                pb.Image = DownloadImage("https://ddragon.leagueoflegends.com/cdn/11.8.1/img/item/" + item + ".png");
+                pb.Image = Image.FromFile(@"Items\" + item + ".png");
                 return;
             }
         }
 
         public string ConvertToSummonerSpell(int spell)
         {
-            if (spell == 7)
+            if (spell == 7)//7 6 21 3 39 12 1 11 4 14
             {
                 return "SummonerHeal";
             }

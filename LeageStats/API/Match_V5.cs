@@ -57,10 +57,15 @@ namespace LeageStats.API
             }
             else
             {
-                HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-                doc.LoadHtml(GetURL(path, true));
-                ReadWrite.WriteJson(doc.ToString(),"text.txt");
-               Root d = JsonConvert.DeserializeObject<Root>(doc.Text);
+                string request;
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead(GetURL(path, true)))
+                using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+                {
+                    request = textReader.ReadToEnd();
+                }
+                ReadWrite.WriteJson(request, "text.txt");
+                Root d = JsonConvert.DeserializeObject<Root>(request);
                 foreach (Participant1 item in d.info.participants)
                 {
                     if (item.puuid == Constants.Summoner.Puuid)
