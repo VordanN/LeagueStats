@@ -67,7 +67,7 @@ namespace LeageStats
             this.panel1.Controls.Add(this.ISLogo);
             this.panel1.Controls.Add(this.IRankImage);
             this.panel1.Controls.Add(this.SName);
-            this.panel1.Location = new System.Drawing.Point(18, 25);
+            this.panel1.Location = new System.Drawing.Point(9, 25);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 520);
@@ -126,6 +126,7 @@ namespace LeageStats
             this.MatcHisroy.Text = "Match History";
             this.MatcHisroy.UseVisualStyleBackColor = false;
             this.MatcHisroy.UseWaitCursor = true;
+            this.MatcHisroy.Click += new System.EventHandler(this.MatcHisroy_Click);
             // 
             // SLvL
             // 
@@ -205,7 +206,6 @@ namespace LeageStats
             this.IRankImage.TabIndex = 1;
             this.IRankImage.TabStop = false;
             this.IRankImage.Tag = "Emblem";
-            this.IRankImage.Click += new System.EventHandler(this.IRankImage_Click);
             // 
             // SName
             // 
@@ -234,7 +234,6 @@ namespace LeageStats
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1008, 520);
             this.flowLayoutPanel1.TabIndex = 1;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Form2
             // 

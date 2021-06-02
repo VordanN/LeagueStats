@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,13 +22,14 @@ namespace LeageStats
     public partial class Form2 : Form
     {
         Controller.ControlerProfile controler;
-        Model.ModelProfile model;
+        ModelProfile model;
         Match_V5 match;
        
         public Form2()
         {
-            controler = new Controller.ControlerProfile();
             InitializeComponent();
+            controler = new Controller.ControlerProfile();
+            Size = new Size(441, 604);
             model = (ModelProfile)controler.GetContext();
 
             SName.Text = model.SummonerName;
@@ -40,20 +42,17 @@ namespace LeageStats
             Losses.Text = Convert.ToString(model.Losses);
             SLvL.Text = Convert.ToString(model.Level);
 
-            match = new Match_V5(Constants.Summoner.Region);
-            //RU_329377877
 
-            List<string> m = match.GetMatchIDs(Constants.Summoner.Puuid);
-            for (int i = 0; i < m.Count; i++)
-            {
-                flowLayoutPanel1.Controls.Add(new MatchView(match.GetModelSat(m[i])));
-            }
+
+            if (!Directory.Exists("Matches"))
+                Directory.CreateDirectory("Matches");
+            if (!Directory.Exists(@"Matches\" + Constants.Summoner.Id))
+                Directory.CreateDirectory(@"Matches\" + Constants.Summoner.Id);
         }
 
-          
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            //Сделать умную ситстему
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
@@ -61,16 +60,28 @@ namespace LeageStats
             Application.Exit();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void MatcHisroy_Click(object sender, EventArgs e)
         {
+            if (Size.Width == 1464)
+            {
+                Size = new Size(441, 604);
+                return;
+            }
+            Size = new Size(1464, 604);
+            match = new Match_V5(Constants.Summoner.Region);
 
+            List<string> m = match.GetMatchIDs(Constants.Summoner.Puuid);
+            foreach (var MatchId in m)
+            {
+                AddMathchToPanel(MatchId);
+            }
         }
 
-        private void IRankImage_Click(object sender, EventArgs e)
+        async void AddMathchToPanel(string MatchId)
         {
-
+            ModelStat modelStat = await match.GetModelSat(MatchId);
+            MatchView matchView = new MatchView(modelStat);
+            flowLayoutPanel1.Controls.Add(matchView);
         }
-
-
     }
 }

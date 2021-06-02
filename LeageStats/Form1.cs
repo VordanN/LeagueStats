@@ -21,49 +21,80 @@ namespace LeageStats
 
         string SummonerRegion { get; set; }
         string SummonerName { get; set; }
-
+        
         public Form1()
         {
-            controller = new ControllerMain();
             InitializeComponent();
-            string[] summoners = Directory.GetFiles(@"Info\Summoners\");
-            foreach (string summonerDIR in summoners)
+            controller = new ControllerMain();
+
+
+            foreach (string summonerDIR in Directory.GetFiles(@"Info\Summoners\"))
             {
                 comboBox1.Items.Add(ReadWrite.ReadJson<SummonerDTO>(summonerDIR).Name);
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
 
 
         private void search_Click(object sender, EventArgs e)
         {
-            SummonerName = comboBox1.Text;
             SummonerRegion = SRegion.SelectedItem.ToString();
+            SummonerName = comboBox1.Text;
+
             if (string.IsNullOrEmpty(SummonerRegion) || string.IsNullOrEmpty(SummonerName))
                 return;
 
             if (File.Exists(@"Info\Summoners\" + SummonerName + ".json"))
-            {
                 Constants.Summoner = ReadWrite.ReadJson<SummonerDTO>(@"Info\Summoners\" + SummonerName + ".json");
-            }
             else if (controller.GetSummener(SummonerRegion, SummonerName))
-            {
                 ReadWrite.WriteJson(Constants.Summoner, @"Info\Summoners\" + SummonerName + ".json");
-            }
             else
             {
                 MessageBox.Show("Not Found/API out of date","EROR");
                 return;
             }
+
             Form2 form2 = new Form2();
             Hide();
             form2.Show();
         }
 
+        private bool dragging;
+        private Point pointClicked;
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                dragging = true;
+                pointClicked = new Point(e.X, e.Y);
+            }
+            else
+            {
+                dragging = false;
+            }
+        }
+        private void button1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point pointMoveTo;
+                pointMoveTo = this.PointToScreen(new Point(e.X, e.Y));
+
+                pointMoveTo.Offset(-pointClicked.X, -pointClicked.Y);
+
+                this.Location = pointMoveTo;
+            }
+        }
+        private void button1_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+          
     }
 }

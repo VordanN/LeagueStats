@@ -7,8 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
-
-
+using System.Threading.Tasks;
 
 namespace LeageStats.API
 {
@@ -31,12 +30,8 @@ namespace LeageStats.API
 
         }
 
-        public ModelStat GetModelSat(string matchId)
+        public async Task<ModelStat> GetModelSat(string matchId)
         {
-            if (!Directory.Exists("Matches"))
-                Directory.CreateDirectory("Matches");
-            if (!Directory.Exists(@"Matches\" + Constants.Summoner.Id))
-                Directory.CreateDirectory(@"Matches\" + Constants.Summoner.Id);
 
             string path = "match/v5/matches/" + matchId;
 
@@ -67,7 +62,7 @@ namespace LeageStats.API
                 ReadWrite.WriteJson(d, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
             }
 
-
+            
             return new ModelStat()
             {
                 assists = participants.assists,

@@ -50,8 +50,6 @@ Z:\Bradley\LeageStats\LeageStats\bin\Debug\LeageStats.exe
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\LeageStats.pdb
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\LeageStats.exe.CodeAnalysisLog.xml
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\LeageStats.exe.lastcodeanalysissucceeded
-Z:\Bradley\LeageStats\LeageStats\bin\Debug\MessagePack.Annotations.dll
-Z:\Bradley\LeageStats\LeageStats\bin\Debug\MessagePack.dll
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\Newtonsoft.Json.dll
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\RiotNet.dll
@@ -65,10 +63,6 @@ Z:\Bradley\LeageStats\LeageStats\bin\Debug\System.Text.Json.dll
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\System.Threading.Tasks.Extensions.dll
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\System.ValueTuple.dll
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\Utf8Json.dll
-Z:\Bradley\LeageStats\LeageStats\bin\Debug\ZeroFormatter.dll
-Z:\Bradley\LeageStats\LeageStats\bin\Debug\ZeroFormatter.Interfaces.dll
-Z:\Bradley\LeageStats\LeageStats\bin\Debug\MessagePack.xml
-Z:\Bradley\LeageStats\LeageStats\bin\Debug\MessagePack.Annotations.xml
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\Newtonsoft.Json.xml
 Z:\Bradley\LeageStats\LeageStats\bin\Debug\RiotNet.xml

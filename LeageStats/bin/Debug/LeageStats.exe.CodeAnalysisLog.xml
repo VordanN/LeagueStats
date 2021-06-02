@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="16.0">
  <Targets>
-  <Target Name="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\bin\Debug\LeageStats.exe">
+  <Target Name="Z:\Bradley\LeageStats\LeageStats\bin\Debug\LeageStats.exe">
    <Modules>
     <Module Name="leagestats.exe">
      <Namespaces>
@@ -12,23 +12,8 @@
          <Members>
           <Member Name="#WriteJson(System.Object,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-01 21:12:56Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats" File="FileSystem.cs" Line="18">Объект "'fs'" можно удалять более одного раза в методе 'ReadWrite.WriteJson(object, string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 18</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-       </Types>
-      </Namespace>
-      <Namespace Name="LeageStats.API">
-       <Types>
-        <Type Name="Match_V5" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#GetModelSat(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
-           <Messages>
-            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-01 21:12:56Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\API" File="Match_V5.cs" Line="56">Объект "'stream'" можно удалять более одного раза в методе 'Match_V5.GetModelSat(string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 56</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-02 17:51:37Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="Z:\Bradley\LeageStats\LeageStats" File="FileSystem.cs" Line="18">Object 'fs' can be disposed more than once in method 'ReadWrite.WriteJson(object, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 18</Issue>
             </Message>
            </Messages>
           </Member>
@@ -42,10 +27,10 @@
   </Target>
  </Targets>
  <Rules>
-  <Rule TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202">
-   <Name>Не ликвидировать объекты несколько раз</Name>
-   <Description>Правильно реализованный метод Dispose может вызываться неоднократно без создания исключения. Однако такой гарантии нет, и чтобы предотвратить создание System.ObjectDisposedException, не следует вызывать метод Dispose для объекта более одного раза.</Description>
-   <Resolution Name="Default">Объект "{0}" можно удалять более одного раза в методе {1}. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 56</Resolution>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 18</Resolution>
    <Owner>RuleOwner</Owner>
    <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
    <Email />
@@ -54,27 +39,27 @@
   </Rule>
  </Rules>
  <Localized>
-  <String Key="Category">Категория</String>
-  <String Key="Certainty">Достоверность</String>
-  <String Key="CollapseAll">Свернуть все</String>
-  <String Key="CheckId">ИД проверки</String>
-  <String Key="Error">Ошибка</String>
-  <String Key="Errors">ошибки</String>
-  <String Key="ExpandAll">Развернуть все</String>
-  <String Key="Help">Справка</String>
-  <String Key="Line">Строка</String>
-  <String Key="Messages">сообщения</String>
-  <String Key="LocationNotStoredInPdb">[расположение не сохранено в PDB]</String>
-  <String Key="Project">Проект</String>
-  <String Key="Resolution">Разрешение</String>
-  <String Key="Rule">Правило</String>
-  <String Key="RuleFile">Файл правил</String>
-  <String Key="RuleDescription">Описание правила</String>
-  <String Key="Source">Источник</String>
-  <String Key="Status">Состояние</String>
-  <String Key="Target">Цель</String>
-  <String Key="Warning">Предупреждение</String>
-  <String Key="Warnings">предупреждения</String>
-  <String Key="ReportTitle">Отчет по Code Analysis</String>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
  </Localized>
 </FxCopReport>
