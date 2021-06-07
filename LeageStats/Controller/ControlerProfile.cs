@@ -15,16 +15,24 @@ namespace LeageStats.Controller
         {
             var summoner = Constants.Summoner;
             var LeagueEntry = GetPosition(summoner);
-            return new ModelProfile(summoner.Name,summoner.ProfileIconId,summoner.SummonerLevel,LeagueEntry.Tier,LeagueEntry.Rank,LeagueEntry.Wins,LeagueEntry.Losses);
+            return new ModelProfile(summoner.Name,summoner.ProfileIconId,summoner.SummonerLevel,LeagueEntry.Tier,LeagueEntry.Rank,LeagueEntry.Wins,LeagueEntry.Losses,LeagueEntry.LeaguePoints);
         }
 
         private LeagueEntryDTO GetPosition(SummonerDTO summoner)
         {
             League_V4 league = new League_V4(Constants.Summoner.Region);
+            try
+            {
+                var position = league.GetLeagueEntryDTOs(summoner.Id).Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
+                return position ?? new LeagueEntryDTO();
+            }
+            catch (Exception)
+            {
 
-            var position = league.GetLeagueEntryDTOs(summoner.Id).Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
-
-            return position ?? new LeagueEntryDTO();
+                throw new Exception("API Error(method GetPosition(SummonerDTO summoner))");
+            }
+            
+            
 
         }
     }

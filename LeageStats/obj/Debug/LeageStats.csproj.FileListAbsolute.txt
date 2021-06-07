@@ -133,3 +133,11 @@ C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.csproj.Cor
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.csproj.CopyComplete
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.exe
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.pdb
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\bin\Debug\en\LeageStats.resources.dll
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.Form1.en.resources
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.Form2.en.resources
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.MatchView.en.resources
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\en\LeageStats.resources.dll
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.Form1.ru.resources
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\bin\Debug\ru\LeageStats.resources.dll
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\ru\LeageStats.resources.dll

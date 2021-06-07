@@ -29,243 +29,468 @@ namespace LeageStats
         /// </summary>
         private void InitializeComponent()
         {
-            this.CharecterIcon = new System.Windows.Forms.PictureBox();
-            this.Spell1 = new System.Windows.Forms.PictureBox();
-            this.Spell2 = new System.Windows.Forms.PictureBox();
-            this.Level = new System.Windows.Forms.Label();
-            this.CharecterName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.kda = new System.Windows.Forms.Label();
-            this.winluse = new System.Windows.Forms.PictureBox();
-            this.moneyernerd = new System.Windows.Forms.Label();
-            this.cs = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.CharecterIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spell1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spell2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.winluse)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MatchView));
+            this.dicorativWLColor = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.GameTime = new System.Windows.Forms.Label();
+            this.WORL = new System.Windows.Forms.Label();
+            this.GameMode = new System.Windows.Forms.Label();
+            this.TimeWhenPlayed = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SummoneSpeel2 = new System.Windows.Forms.PictureBox();
+            this.SummoneSpeel1 = new System.Windows.Forms.PictureBox();
+            this.ChampionLvL = new System.Windows.Forms.Label();
+            this.ChampionLogo = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.CS = new System.Windows.Forms.Label();
+            this.KDAProsent = new System.Windows.Forms.Label();
+            this.KDA = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Vision = new System.Windows.Forms.Label();
+            this.Item6 = new System.Windows.Forms.PictureBox();
+            this.Item5 = new System.Windows.Forms.PictureBox();
+            this.Item4 = new System.Windows.Forms.PictureBox();
+            this.Item3 = new System.Windows.Forms.PictureBox();
+            this.Item2 = new System.Windows.Forms.PictureBox();
+            this.Item1 = new System.Windows.Forms.PictureBox();
+            this.Superitem = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.summonerName10 = new System.Windows.Forms.Label();
+            this.summonerName9 = new System.Windows.Forms.Label();
+            this.summonerName8 = new System.Windows.Forms.Label();
+            this.summonerName7 = new System.Windows.Forms.Label();
+            this.summonerName6 = new System.Windows.Forms.Label();
+            this.summonerLogo10 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo5 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo9 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo4 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo8 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo3 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo7 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo2 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo6 = new System.Windows.Forms.PictureBox();
+            this.summonerLogo1 = new System.Windows.Forms.PictureBox();
+            this.summonerName5 = new System.Windows.Forms.Label();
+            this.summonerName4 = new System.Windows.Forms.Label();
+            this.summonerName3 = new System.Windows.Forms.Label();
+            this.summonerName2 = new System.Windows.Forms.Label();
+            this.summonerName1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SummoneSpeel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SummoneSpeel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChampionLogo)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Item6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Superitem)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CharecterIcon
+            // dicorativWLColor
             // 
-            this.CharecterIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CharecterIcon.Location = new System.Drawing.Point(21, 15);
-            this.CharecterIcon.Name = "CharecterIcon";
-            this.CharecterIcon.Size = new System.Drawing.Size(100, 100);
-            this.CharecterIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CharecterIcon.TabIndex = 0;
-            this.CharecterIcon.TabStop = false;
+            this.dicorativWLColor.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.dicorativWLColor, "dicorativWLColor");
+            this.dicorativWLColor.Name = "dicorativWLColor";
+            this.dicorativWLColor.TabStop = false;
+            this.dicorativWLColor.UseVisualStyleBackColor = false;
             // 
-            // Spell1
+            // panel1
             // 
-            this.Spell1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Spell1.Location = new System.Drawing.Point(129, 12);
-            this.Spell1.Name = "Spell1";
-            this.Spell1.Size = new System.Drawing.Size(50, 50);
-            this.Spell1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Spell1.TabIndex = 1;
-            this.Spell1.TabStop = false;
+            this.panel1.Controls.Add(this.GameTime);
+            this.panel1.Controls.Add(this.WORL);
+            this.panel1.Controls.Add(this.GameMode);
+            this.panel1.Controls.Add(this.TimeWhenPlayed);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
-            // Spell2
+            // GameTime
             // 
-            this.Spell2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Spell2.Location = new System.Drawing.Point(129, 68);
-            this.Spell2.Name = "Spell2";
-            this.Spell2.Size = new System.Drawing.Size(50, 50);
-            this.Spell2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Spell2.TabIndex = 1;
-            this.Spell2.TabStop = false;
+            resources.ApplyResources(this.GameTime, "GameTime");
+            this.GameTime.Name = "GameTime";
             // 
-            // Level
+            // WORL
             // 
-            this.Level.AutoSize = true;
-            this.Level.BackColor = System.Drawing.Color.Black;
-            this.Level.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Level.ForeColor = System.Drawing.Color.White;
-            this.Level.Location = new System.Drawing.Point(27, 81);
-            this.Level.Name = "Level";
-            this.Level.Size = new System.Drawing.Size(0, 32);
-            this.Level.TabIndex = 2;
+            resources.ApplyResources(this.WORL, "WORL");
+            this.WORL.Name = "WORL";
             // 
-            // CharecterName
+            // GameMode
             // 
-            this.CharecterName.AutoSize = true;
-            this.CharecterName.Font = new System.Drawing.Font("Malgun Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharecterName.ForeColor = System.Drawing.Color.Black;
-            this.CharecterName.Location = new System.Drawing.Point(185, 48);
-            this.CharecterName.Name = "CharecterName";
-            this.CharecterName.Size = new System.Drawing.Size(0, 30);
-            this.CharecterName.TabIndex = 3;
+            resources.ApplyResources(this.GameMode, "GameMode");
+            this.GameMode.Name = "GameMode";
             // 
-            // pictureBox1
+            // TimeWhenPlayed
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(341, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.TimeWhenPlayed, "TimeWhenPlayed");
+            this.TimeWhenPlayed.Name = "TimeWhenPlayed";
             // 
-            // pictureBox2
+            // panel2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(407, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.panel2.Controls.Add(this.SummoneSpeel2);
+            this.panel2.Controls.Add(this.SummoneSpeel1);
+            this.panel2.Controls.Add(this.ChampionLvL);
+            this.panel2.Controls.Add(this.ChampionLogo);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
-            // pictureBox3
+            // SummoneSpeel2
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(473, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            resources.ApplyResources(this.SummoneSpeel2, "SummoneSpeel2");
+            this.SummoneSpeel2.Name = "SummoneSpeel2";
+            this.SummoneSpeel2.TabStop = false;
             // 
-            // pictureBox4
+            // SummoneSpeel1
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Location = new System.Drawing.Point(539, 36);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            resources.ApplyResources(this.SummoneSpeel1, "SummoneSpeel1");
+            this.SummoneSpeel1.Name = "SummoneSpeel1";
+            this.SummoneSpeel1.TabStop = false;
             // 
-            // pictureBox5
+            // ChampionLvL
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(605, 36);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            resources.ApplyResources(this.ChampionLvL, "ChampionLvL");
+            this.ChampionLvL.BackColor = System.Drawing.Color.Black;
+            this.ChampionLvL.ForeColor = System.Drawing.Color.White;
+            this.ChampionLvL.Name = "ChampionLvL";
             // 
-            // pictureBox6
+            // ChampionLogo
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Location = new System.Drawing.Point(671, 36);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
+            resources.ApplyResources(this.ChampionLogo, "ChampionLogo");
+            this.ChampionLogo.Name = "ChampionLogo";
+            this.ChampionLogo.TabStop = false;
             // 
-            // kda
+            // panel3
             // 
-            this.kda.AutoSize = true;
-            this.kda.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kda.ForeColor = System.Drawing.Color.Black;
-            this.kda.Location = new System.Drawing.Point(751, 53);
-            this.kda.Name = "kda";
-            this.kda.Size = new System.Drawing.Size(0, 25);
-            this.kda.TabIndex = 5;
+            this.panel3.Controls.Add(this.CS);
+            this.panel3.Controls.Add(this.KDAProsent);
+            this.panel3.Controls.Add(this.KDA);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
             // 
-            // winluse
+            // CS
             // 
-            this.winluse.Location = new System.Drawing.Point(0, -12);
-            this.winluse.Name = "winluse";
-            this.winluse.Size = new System.Drawing.Size(21, 158);
-            this.winluse.TabIndex = 6;
-            this.winluse.TabStop = false;
+            resources.ApplyResources(this.CS, "CS");
+            this.CS.Name = "CS";
             // 
-            // moneyernerd
+            // KDAProsent
             // 
-            this.moneyernerd.AutoSize = true;
-            this.moneyernerd.Font = new System.Drawing.Font("Malgun Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyernerd.ForeColor = System.Drawing.Color.Black;
-            this.moneyernerd.Location = new System.Drawing.Point(876, 36);
-            this.moneyernerd.Name = "moneyernerd";
-            this.moneyernerd.Size = new System.Drawing.Size(0, 25);
-            this.moneyernerd.TabIndex = 7;
+            resources.ApplyResources(this.KDAProsent, "KDAProsent");
+            this.KDAProsent.Name = "KDAProsent";
             // 
-            // cs
+            // KDA
             // 
-            this.cs.AutoSize = true;
-            this.cs.Font = new System.Drawing.Font("Malgun Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cs.ForeColor = System.Drawing.Color.Black;
-            this.cs.Location = new System.Drawing.Point(892, 60);
-            this.cs.Name = "cs";
-            this.cs.Size = new System.Drawing.Size(0, 17);
-            this.cs.TabIndex = 7;
+            resources.ApplyResources(this.KDA, "KDA");
+            this.KDA.Name = "KDA";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.Vision);
+            this.panel4.Controls.Add(this.Item6);
+            this.panel4.Controls.Add(this.Item5);
+            this.panel4.Controls.Add(this.Item4);
+            this.panel4.Controls.Add(this.Item3);
+            this.panel4.Controls.Add(this.Item2);
+            this.panel4.Controls.Add(this.Item1);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
+            // 
+            // Vision
+            // 
+            resources.ApplyResources(this.Vision, "Vision");
+            this.Vision.Name = "Vision";
+            // 
+            // Item6
+            // 
+            this.Item6.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.Item6, "Item6");
+            this.Item6.Name = "Item6";
+            this.Item6.TabStop = false;
+            // 
+            // Item5
+            // 
+            this.Item5.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.Item5, "Item5");
+            this.Item5.Name = "Item5";
+            this.Item5.TabStop = false;
+            // 
+            // Item4
+            // 
+            this.Item4.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.Item4, "Item4");
+            this.Item4.Name = "Item4";
+            this.Item4.TabStop = false;
+            // 
+            // Item3
+            // 
+            this.Item3.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.Item3, "Item3");
+            this.Item3.Name = "Item3";
+            this.Item3.TabStop = false;
+            // 
+            // Item2
+            // 
+            this.Item2.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.Item2, "Item2");
+            this.Item2.Name = "Item2";
+            this.Item2.TabStop = false;
+            // 
+            // Item1
+            // 
+            this.Item1.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.Item1, "Item1");
+            this.Item1.Name = "Item1";
+            this.Item1.TabStop = false;
+            // 
+            // Superitem
+            // 
+            resources.ApplyResources(this.Superitem, "Superitem");
+            this.Superitem.Name = "Superitem";
+            this.Superitem.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.summonerName10);
+            this.panel5.Controls.Add(this.summonerName9);
+            this.panel5.Controls.Add(this.summonerName8);
+            this.panel5.Controls.Add(this.summonerName7);
+            this.panel5.Controls.Add(this.summonerName6);
+            this.panel5.Controls.Add(this.summonerLogo10);
+            this.panel5.Controls.Add(this.summonerLogo5);
+            this.panel5.Controls.Add(this.summonerLogo9);
+            this.panel5.Controls.Add(this.summonerLogo4);
+            this.panel5.Controls.Add(this.summonerLogo8);
+            this.panel5.Controls.Add(this.summonerLogo3);
+            this.panel5.Controls.Add(this.summonerLogo7);
+            this.panel5.Controls.Add(this.summonerLogo2);
+            this.panel5.Controls.Add(this.summonerLogo6);
+            this.panel5.Controls.Add(this.summonerLogo1);
+            this.panel5.Controls.Add(this.summonerName5);
+            this.panel5.Controls.Add(this.summonerName4);
+            this.panel5.Controls.Add(this.summonerName3);
+            this.panel5.Controls.Add(this.summonerName2);
+            this.panel5.Controls.Add(this.summonerName1);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // summonerName10
+            // 
+            resources.ApplyResources(this.summonerName10, "summonerName10");
+            this.summonerName10.Name = "summonerName10";
+            // 
+            // summonerName9
+            // 
+            resources.ApplyResources(this.summonerName9, "summonerName9");
+            this.summonerName9.Name = "summonerName9";
+            // 
+            // summonerName8
+            // 
+            resources.ApplyResources(this.summonerName8, "summonerName8");
+            this.summonerName8.Name = "summonerName8";
+            // 
+            // summonerName7
+            // 
+            resources.ApplyResources(this.summonerName7, "summonerName7");
+            this.summonerName7.Name = "summonerName7";
+            // 
+            // summonerName6
+            // 
+            resources.ApplyResources(this.summonerName6, "summonerName6");
+            this.summonerName6.Name = "summonerName6";
+            // 
+            // summonerLogo10
+            // 
+            resources.ApplyResources(this.summonerLogo10, "summonerLogo10");
+            this.summonerLogo10.Name = "summonerLogo10";
+            this.summonerLogo10.TabStop = false;
+            // 
+            // summonerLogo5
+            // 
+            resources.ApplyResources(this.summonerLogo5, "summonerLogo5");
+            this.summonerLogo5.Name = "summonerLogo5";
+            this.summonerLogo5.TabStop = false;
+            // 
+            // summonerLogo9
+            // 
+            resources.ApplyResources(this.summonerLogo9, "summonerLogo9");
+            this.summonerLogo9.Name = "summonerLogo9";
+            this.summonerLogo9.TabStop = false;
+            // 
+            // summonerLogo4
+            // 
+            resources.ApplyResources(this.summonerLogo4, "summonerLogo4");
+            this.summonerLogo4.Name = "summonerLogo4";
+            this.summonerLogo4.TabStop = false;
+            // 
+            // summonerLogo8
+            // 
+            resources.ApplyResources(this.summonerLogo8, "summonerLogo8");
+            this.summonerLogo8.Name = "summonerLogo8";
+            this.summonerLogo8.TabStop = false;
+            // 
+            // summonerLogo3
+            // 
+            resources.ApplyResources(this.summonerLogo3, "summonerLogo3");
+            this.summonerLogo3.Name = "summonerLogo3";
+            this.summonerLogo3.TabStop = false;
+            // 
+            // summonerLogo7
+            // 
+            resources.ApplyResources(this.summonerLogo7, "summonerLogo7");
+            this.summonerLogo7.Name = "summonerLogo7";
+            this.summonerLogo7.TabStop = false;
+            // 
+            // summonerLogo2
+            // 
+            resources.ApplyResources(this.summonerLogo2, "summonerLogo2");
+            this.summonerLogo2.Name = "summonerLogo2";
+            this.summonerLogo2.TabStop = false;
+            // 
+            // summonerLogo6
+            // 
+            resources.ApplyResources(this.summonerLogo6, "summonerLogo6");
+            this.summonerLogo6.Name = "summonerLogo6";
+            this.summonerLogo6.TabStop = false;
+            // 
+            // summonerLogo1
+            // 
+            resources.ApplyResources(this.summonerLogo1, "summonerLogo1");
+            this.summonerLogo1.Name = "summonerLogo1";
+            this.summonerLogo1.TabStop = false;
+            // 
+            // summonerName5
+            // 
+            resources.ApplyResources(this.summonerName5, "summonerName5");
+            this.summonerName5.Name = "summonerName5";
+            // 
+            // summonerName4
+            // 
+            resources.ApplyResources(this.summonerName4, "summonerName4");
+            this.summonerName4.Name = "summonerName4";
+            // 
+            // summonerName3
+            // 
+            resources.ApplyResources(this.summonerName3, "summonerName3");
+            this.summonerName3.Name = "summonerName3";
+            // 
+            // summonerName2
+            // 
+            resources.ApplyResources(this.summonerName2, "summonerName2");
+            this.summonerName2.Name = "summonerName2";
+            // 
+            // summonerName1
+            // 
+            resources.ApplyResources(this.summonerName1, "summonerName1");
+            this.summonerName1.Name = "summonerName1";
             // 
             // MatchView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.cs);
-            this.Controls.Add(this.moneyernerd);
-            this.Controls.Add(this.winluse);
-            this.Controls.Add(this.kda);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.CharecterName);
-            this.Controls.Add(this.Level);
-            this.Controls.Add(this.Spell2);
-            this.Controls.Add(this.Spell1);
-            this.Controls.Add(this.CharecterIcon);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.Superitem);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dicorativWLColor);
             this.Name = "MatchView";
-            this.Size = new System.Drawing.Size(960, 126);
-            this.Load += new System.EventHandler(this.MatchView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CharecterIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spell1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Spell2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.winluse)).EndInit();
+            this.Click += new System.EventHandler(this.MatchView_Click);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SummoneSpeel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SummoneSpeel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChampionLogo)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Item6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Item1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Superitem)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.summonerLogo1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox CharecterIcon;
-        private System.Windows.Forms.PictureBox Spell1;
-        private System.Windows.Forms.PictureBox Spell2;
-        private System.Windows.Forms.Label Level;
-        private System.Windows.Forms.Label CharecterName;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label kda;
-        private System.Windows.Forms.PictureBox winluse;
-        private System.Windows.Forms.Label moneyernerd;
-        private System.Windows.Forms.Label cs;
+        private System.Windows.Forms.Button dicorativWLColor;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label GameMode;
+        private System.Windows.Forms.Label TimeWhenPlayed;
+        private System.Windows.Forms.Label GameTime;
+        private System.Windows.Forms.Label WORL;
+        private System.Windows.Forms.PictureBox ChampionLogo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox SummoneSpeel2;
+        private System.Windows.Forms.PictureBox SummoneSpeel1;
+        private System.Windows.Forms.Label ChampionLvL;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label CS;
+        private System.Windows.Forms.Label KDAProsent;
+        private System.Windows.Forms.Label KDA;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label Vision;
+        private System.Windows.Forms.PictureBox Superitem;
+        private System.Windows.Forms.PictureBox Item6;
+        private System.Windows.Forms.PictureBox Item5;
+        private System.Windows.Forms.PictureBox Item4;
+        private System.Windows.Forms.PictureBox Item3;
+        private System.Windows.Forms.PictureBox Item2;
+        private System.Windows.Forms.PictureBox Item1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox summonerLogo10;
+        private System.Windows.Forms.PictureBox summonerLogo5;
+        private System.Windows.Forms.PictureBox summonerLogo9;
+        private System.Windows.Forms.PictureBox summonerLogo4;
+        private System.Windows.Forms.PictureBox summonerLogo8;
+        private System.Windows.Forms.PictureBox summonerLogo3;
+        private System.Windows.Forms.PictureBox summonerLogo7;
+        private System.Windows.Forms.PictureBox summonerLogo2;
+        private System.Windows.Forms.PictureBox summonerLogo6;
+        private System.Windows.Forms.PictureBox summonerLogo1;
+        private System.Windows.Forms.Label summonerName10;
+        private System.Windows.Forms.Label summonerName9;
+        private System.Windows.Forms.Label summonerName8;
+        private System.Windows.Forms.Label summonerName7;
+        private System.Windows.Forms.Label summonerName6;
+        private System.Windows.Forms.Label summonerName5;
+        private System.Windows.Forms.Label summonerName4;
+        private System.Windows.Forms.Label summonerName3;
+        private System.Windows.Forms.Label summonerName2;
+        private System.Windows.Forms.Label summonerName1;
     }
 }

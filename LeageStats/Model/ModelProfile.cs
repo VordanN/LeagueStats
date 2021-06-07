@@ -11,7 +11,7 @@ namespace LeageStats.Model
 {
     public class ModelProfile
     {
-        public ModelProfile(string summonerName, int icon, long level, string tier, string rank, int wins, int losses)
+        public ModelProfile(string summonerName, int icon, long level, string tier, string rank, int wins, int losses,int Lp)
         {
             SummonerName = summonerName;
             Icon = "http://opgg-static.akamaized.net/images/profile_icons/profileIcon" + icon+".jpg";
@@ -21,6 +21,7 @@ namespace LeageStats.Model
             Emblem = "emblems/Season_2019_-_" + tier.ToUpper()[0]+tier.Substring(1) + "_"+ convertRomanToInt(rank) +".png";
             Wins = wins;
             Losses = losses;
+            LegaePoints = Lp;
         }
         
         private static int convertRomanToInt(String romanNumeral)
@@ -57,7 +58,7 @@ namespace LeageStats.Model
         public string Emblem { get; private set; }
         public int Wins { get; private set; }
         public int Losses { get; private set; }
-
+        public int LegaePoints { get; private set; }
 
         
     }

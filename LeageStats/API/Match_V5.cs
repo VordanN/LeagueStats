@@ -1,5 +1,6 @@
 ﻿using FileSystem;
 using LeageStats.Model;
+using LeageStats.Model.Match;
 using LeageStats.Utilits;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -30,15 +31,14 @@ namespace LeageStats.API
 
         }
 
-        public async Task<ModelStat> GetModelSat(string matchId)
+        public Root GetModelSat(string matchId)
         {
-
             string path = "match/v5/matches/" + matchId;
 
-            Participant1 participants = new Participant1();
+            Root root = new Root();
             if (File.Exists(@"Matches\" + Constants.Summoner.Id + @"\" + matchId))
             {
-                participants = ReadWrite.ReadJson<Root>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId).info.participants.Where(p => p.puuid.Equals(Constants.Summoner.Puuid)).FirstOrDefault();
+                root = ReadWrite.ReadJson<Root>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId);
             }
             else
             {
@@ -49,40 +49,12 @@ namespace LeageStats.API
                 {
                     request = textReader.ReadToEnd();
                 }
-                ReadWrite.WriteJson(request, "text.txt");
-                Root d = JsonConvert.DeserializeObject<Root>(request);
-                foreach (Participant1 item in d.info.participants)
-                {
-                    if (item.puuid == Constants.Summoner.Puuid)
-                    {
-                        participants = item;
-                        break;
-                    }
-                }
-                ReadWrite.WriteJson(d, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
+                root = JsonConvert.DeserializeObject<Root>(request);
+                ReadWrite.WriteJson(root, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
             }
 
-            
-            return new ModelStat()
-            {
-                assists = participants.assists,
-                championName = participants.championName,
-                champLevel = participants.champLevel,
-                deaths = participants.deaths,
-                goldEarned = participants.goldEarned,
-                item0 = participants.item0,
-                item1 = participants.item1,
-                item2 = participants.item2,
-                item3 = participants.item3,
-                item4 = participants.item4,
-                item5 = participants.item5,
-                kills = participants.kills,
-                neutralMinionsKilled = participants.neutralMinionsKilled,
-                summoner1Id = participants.summoner1Id,
-                summoner2Id = participants.summoner2Id,
-                totalMinionsKilled = participants.totalMinionsKilled,
-                win = participants.win
-            };
+
+            return root;
         }
 
         public MatchDto GetMatchByMatchIDAsync(string matchId)

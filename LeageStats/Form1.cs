@@ -12,7 +12,8 @@ using System.Windows.Forms;
 using LeageStats.Utilits;
 using FileSystem;
 using System.IO;
-
+using System.Globalization;
+using System.Threading;
 namespace LeageStats
 {
     public partial class Form1 : Form
@@ -95,6 +96,18 @@ namespace LeageStats
             Application.Exit();
         }
 
-          
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("ru");   
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            foreach (Control c in this.Controls)
+            {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
+                resources.ApplyResources(c, c.Name, new CultureInfo(lang));
+            }
+        }
     }
 }

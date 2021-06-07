@@ -16,7 +16,7 @@ namespace LeageStats.API
         public API(string region)
         {
             Region = region;
-            Key = "RGAPI-c5d2ee48-c4de-41a2-8501-0e5927a6ec50";
+            Key = "RGAPI-d5847649-0b0d-4b2e-a0d8-d07768d377b1";
         }
 
         protected HttpResponseMessage GET(string URL)

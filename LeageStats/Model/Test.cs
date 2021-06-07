@@ -451,6 +451,10 @@ namespace LeageStats.Model
 
     public class Root
     {
+        public Root()
+        {
+        }
+
         public Root(Metadata1 metadata, Info1 info)
         {
             this.metadata = metadata;
