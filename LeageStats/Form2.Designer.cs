@@ -31,20 +31,21 @@ namespace LeageStats
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.search = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LP = new System.Windows.Forms.Label();
             this.LTier = new System.Windows.Forms.Label();
+            this.IRankImage = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.LLVL = new System.Windows.Forms.Label();
             this.SLvL = new System.Windows.Forms.Label();
             this.Losses = new System.Windows.Forms.Label();
             this.Wins = new System.Windows.Forms.Label();
+            this.ISLogo = new System.Windows.Forms.PictureBox();
             this.SName = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.IRankImage = new System.Windows.Forms.PictureBox();
-            this.ISLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IRankImage)).BeginInit();
@@ -53,8 +54,8 @@ namespace LeageStats
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(72)))), ((int)(((byte)(95)))));
+            this.panel1.Controls.Add(this.search);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.panel2);
@@ -64,16 +65,31 @@ namespace LeageStats
             this.panel1.Controls.Add(this.Wins);
             this.panel1.Controls.Add(this.ISLogo);
             this.panel1.Controls.Add(this.SName);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // search
+            // 
+            resources.ApplyResources(this.search, "search");
+            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(113)))), ((int)(((byte)(109)))));
+            this.search.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.search.FlatAppearance.BorderSize = 0;
+            this.search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(103)))));
+            this.search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(103)))));
+            this.search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(242)))), ((int)(((byte)(215)))));
+            this.search.Name = "search";
+            this.search.TabStop = false;
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.Search_Click);
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.LP);
             this.panel3.Controls.Add(this.LTier);
             this.panel3.Controls.Add(this.IRankImage);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // LP
@@ -92,6 +108,15 @@ namespace LeageStats
             this.LTier.Name = "LTier";
             this.LTier.Tag = "Tier";
             // 
+            // IRankImage
+            // 
+            this.IRankImage.BackColor = System.Drawing.Color.Transparent;
+            this.IRankImage.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.IRankImage, "IRankImage");
+            this.IRankImage.Name = "IRankImage";
+            this.IRankImage.TabStop = false;
+            this.IRankImage.Tag = "Emblem";
+            // 
             // flowLayoutPanel1
             // 
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
@@ -100,9 +125,9 @@ namespace LeageStats
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // LLVL
@@ -132,6 +157,14 @@ namespace LeageStats
             this.Wins.Name = "Wins";
             this.Wins.Tag = "Wins";
             // 
+            // ISLogo
+            // 
+            this.ISLogo.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.ISLogo, "ISLogo");
+            this.ISLogo.Name = "ISLogo";
+            this.ISLogo.TabStop = false;
+            this.ISLogo.Tag = "ProfileIcon";
+            // 
             // SName
             // 
             resources.ApplyResources(this.SName, "SName");
@@ -142,8 +175,8 @@ namespace LeageStats
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button2, "button2");
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -151,11 +184,11 @@ namespace LeageStats
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
+            resources.ApplyResources(this.button1, "button1");
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
             this.button1.Name = "button1";
             this.button1.TabStop = false;
@@ -163,23 +196,6 @@ namespace LeageStats
             this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
             this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove);
             this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
-            // 
-            // IRankImage
-            // 
-            resources.ApplyResources(this.IRankImage, "IRankImage");
-            this.IRankImage.BackColor = System.Drawing.Color.Transparent;
-            this.IRankImage.Cursor = System.Windows.Forms.Cursors.Default;
-            this.IRankImage.Name = "IRankImage";
-            this.IRankImage.TabStop = false;
-            this.IRankImage.Tag = "Emblem";
-            // 
-            // ISLogo
-            // 
-            resources.ApplyResources(this.ISLogo, "ISLogo");
-            this.ISLogo.BackColor = System.Drawing.Color.Transparent;
-            this.ISLogo.Name = "ISLogo";
-            this.ISLogo.TabStop = false;
-            this.ISLogo.Tag = "ProfileIcon";
             // 
             // Form2
             // 
@@ -215,10 +231,11 @@ namespace LeageStats
         private System.Windows.Forms.PictureBox IRankImage;
         private System.Windows.Forms.Label LTier;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label LP;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button search;
     }
 }

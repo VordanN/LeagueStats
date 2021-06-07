@@ -100,7 +100,7 @@ namespace LeageStats
             this.search.Name = "search";
             this.search.TabStop = false;
             this.search.UseVisualStyleBackColor = false;
-            this.search.Click += new System.EventHandler(this.search_Click);
+            this.search.Click += new System.EventHandler(this.Search_Click);
             // 
             // SServerLable
             // 
@@ -128,9 +128,9 @@ namespace LeageStats
             this.button1.Name = "button1";
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
-            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.button1_MouseUp);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseDown);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseMove);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseUp);
             // 
             // button2
             // 
@@ -139,7 +139,7 @@ namespace LeageStats
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // pictureBox1
             // 

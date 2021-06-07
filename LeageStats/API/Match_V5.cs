@@ -1,14 +1,11 @@
 ﻿using FileSystem;
 using LeageStats.Model;
-using LeageStats.Model.Match;
 using LeageStats.Utilits;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LeageStats.API
 {
@@ -34,30 +31,38 @@ namespace LeageStats.API
         public Root GetModelSat(string matchId)
         {
             string path = "match/v5/matches/" + matchId;
-
-            Root root = new Root();
+            _ = new Root();
+            Root root;
             if (File.Exists(@"Matches\" + Constants.Summoner.Id + @"\" + matchId))
             {
                 root = ReadWrite.ReadJson<Root>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId);
             }
             else
             {
-                string request;
-                using (var client = new WebClient())
-                using (var stream = client.OpenRead(GetURL(path, true)))
-                using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+                try
                 {
-                    request = textReader.ReadToEnd();
+                    string request;
+                    using (var client = new WebClient())
+                    using (var stream = client.OpenRead(GetURL(path, true)))
+                    using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+                    {
+                        request = textReader.ReadToEnd();
+                    }
+                    root = JsonConvert.DeserializeObject<Root>(request);
+                    ReadWrite.WriteJson(root, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
                 }
-                root = JsonConvert.DeserializeObject<Root>(request);
-                ReadWrite.WriteJson(root, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
+                catch (System.Exception)
+                {
+
+                    return null;
+                }
             }
 
 
             return root;
         }
 
-        public MatchDto GetMatchByMatchIDAsync(string matchId)
+        public MatchDto GetMatchByMatchID(string matchId)
         {
             string path = "match/v5/matches/" + matchId;
             using (WebClient w = new WebClient())
@@ -72,7 +77,7 @@ namespace LeageStats.API
             List<MatchDto> matchDtos = new List<MatchDto>();
             foreach (string match in GetMatchIDs(puuid, start, count))
             {
-                matchDtos.Add(GetMatchByMatchIDAsync(match));
+                matchDtos.Add(GetMatchByMatchID(match));
             }
 
             return matchDtos;

@@ -1,28 +1,20 @@
-﻿using LeageStats.Controller;
+﻿using FileSystem;
 using LeageStats.API;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using LeageStats.Controller;
 using LeageStats.Utilits;
-using FileSystem;
+using System;
+using System.Drawing;
 using System.IO;
-using System.Globalization;
-using System.Threading;
+using System.Windows.Forms;
 namespace LeageStats
 {
     public partial class Form1 : Form
     {
-        ControllerMain controller;
+        readonly ControllerMain controller;
 
         string SummonerRegion { get; set; }
         string SummonerName { get; set; }
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +29,7 @@ namespace LeageStats
 
 
 
-        private void search_Click(object sender, EventArgs e)
+        private void Search_Click(object sender, EventArgs e)
         {
             SummonerRegion = SRegion.SelectedItem.ToString();
             SummonerName = comboBox1.Text;
@@ -51,7 +43,7 @@ namespace LeageStats
                 ReadWrite.WriteJson(Constants.Summoner, @"Info\Summoners\" + SummonerName + ".json");
             else
             {
-                MessageBox.Show("Not Found/API out of date","EROR");
+                MessageBox.Show("Not Found/API out of date", "EROR");
                 return;
             }
 
@@ -62,7 +54,7 @@ namespace LeageStats
 
         private bool dragging;
         private Point pointClicked;
-        private void button1_MouseDown(object sender, MouseEventArgs e)
+        private void Button1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -74,7 +66,7 @@ namespace LeageStats
                 dragging = false;
             }
         }
-        private void button1_MouseMove(object sender, MouseEventArgs e)
+        private void Button1_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
             {
@@ -86,28 +78,15 @@ namespace LeageStats
                 this.Location = pointMoveTo;
             }
         }
-        private void button1_MouseUp(object sender, MouseEventArgs e)
+        private void Button1_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ChangeLanguage("ru");   
-        }
-
-        private void ChangeLanguage(string lang)
-        {
-            foreach (Control c in this.Controls)
-            {
-                ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
-                resources.ApplyResources(c, c.Name, new CultureInfo(lang));
-            }
-        }
     }
 }

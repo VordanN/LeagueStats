@@ -1,28 +1,22 @@
-﻿using FileSystem;
-using LeageStats.API;
-using LeageStats.Model;
-using LeageStats.Model.Match;
+﻿using LeageStats.Model;
 using LeageStats.Utilits;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LeageStats
 {
     public partial class MatchView : UserControl
     {
-        private Image GetImage(string filleName,string url= "")
+        private Image GetImage(string filleName, string url = "")
         {
-            
+
             if (File.Exists(filleName))
             {
                 return Image.FromFile(filleName);
@@ -86,7 +80,7 @@ namespace LeageStats
             CS.Text = (participant.neutralMinionsKilled + participant.totalMinionsKilled).ToString() + " CS (" + DecimalPlaceNoRounding(csm, 1) + ")";
 
 
-            chechItem(ref Superitem, participant.item6);
+            ChechItem(ref Superitem, participant.item6);
             List<int> items = new List<int>()
             {
                 participant.item0,
@@ -97,12 +91,12 @@ namespace LeageStats
                 participant.item5,
             };
             items = items.OrderByDescending(x => x).ToList();
-            chechItem(ref Item1, items[0]);
-            chechItem(ref Item2, items[1]);
-            chechItem(ref Item3, items[2]);
-            chechItem(ref Item4, items[3]);
-            chechItem(ref Item5, items[4]);
-            chechItem(ref Item6, items[5]);
+            ChechItem(ref Item1, items[0]);
+            ChechItem(ref Item2, items[1]);
+            ChechItem(ref Item3, items[2]);
+            ChechItem(ref Item4, items[3]);
+            ChechItem(ref Item5, items[4]);
+            ChechItem(ref Item6, items[5]);
             Vision.Text = "Vision: " + participant.visionScore;
 
 
@@ -150,12 +144,12 @@ namespace LeageStats
 
         string DecimalPlaceNoRounding(double d, int decimalPlaces = 2)
         {
-            d = d * Math.Pow(10, decimalPlaces);
+            d *= Math.Pow(10, decimalPlaces);
             d = Math.Truncate(d);
-            d = d / Math.Pow(10, decimalPlaces);
+            d /= Math.Pow(10, decimalPlaces);
             return string.Format("{0:N" + Math.Abs(decimalPlaces) + "}", d);
         }
-        public void chechItem(ref PictureBox pb,int item)
+        public void ChechItem(ref PictureBox pb, int item)
         {
             if (item != 0)
             {
@@ -212,7 +206,7 @@ namespace LeageStats
             }
             return "SummonerHeal";
 
-            
+
         }
         public Image DownloadImage(string fromUrl)
         {
@@ -228,8 +222,8 @@ namespace LeageStats
 
         private void MatchView_Click(object sender, EventArgs e)
         {
-            MatchStats matchStats = new MatchStats(game);
-            matchStats.Show();
+            //MatchStats matchStats = new MatchStats(game);
+            //matchStats.Show();
 
         }
     }

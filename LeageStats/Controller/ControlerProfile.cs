@@ -15,6 +15,7 @@ namespace LeageStats.Controller
         {
             var summoner = Constants.Summoner;
             var LeagueEntry = GetPosition(summoner);
+            Constants.entryDTO = LeagueEntry;
             return new ModelProfile(summoner.Name,summoner.ProfileIconId,summoner.SummonerLevel,LeagueEntry.Tier,LeagueEntry.Rank,LeagueEntry.Wins,LeagueEntry.Losses,LeagueEntry.LeaguePoints);
         }
 
