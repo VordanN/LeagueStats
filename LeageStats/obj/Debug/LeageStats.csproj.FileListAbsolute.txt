@@ -143,3 +143,4 @@ C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\bin\Debug\ru\LeageStats.resourc
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\ru\LeageStats.resources.dll
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.MatchStats.resources
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.Scrool.resources
+C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.ModelStatMini.resources

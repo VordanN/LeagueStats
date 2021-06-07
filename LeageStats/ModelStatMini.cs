@@ -1,9 +1,12 @@
-﻿using LeageStats.Model;
+﻿using LeageStats.API;
+using LeageStats.Controller;
+using LeageStats.Model;
 using LeageStats.Utilits;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,26 +20,27 @@ namespace LeageStats
 {
     public partial class ModelStatMini : UserControl
     {
+        
         public ModelStatMini(Participant1 participant,DateTime date)
         {
             InitializeComponent();
 
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
-            SummoneSpeel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, SummoneSpeel1.Width, SummoneSpeel1.Height, 10, 10));
-            SummoneSpeel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, SummoneSpeel2.Width, SummoneSpeel2.Height, 10, 10));
-            ChampionLogo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ChampionLogo.Width, ChampionLogo.Height, 10, 10));
+            SummoneSpeel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, SummoneSpeel1.Width, SummoneSpeel1.Height, 5, 5));
+            SummoneSpeel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, SummoneSpeel2.Width, SummoneSpeel2.Height, 5, 5));
+            ChampionLogo.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ChampionLogo.Width, ChampionLogo.Height, 5, 5));
 
-            Item1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item1.Width, Item1.Height, 10, 10));
-            Item2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item2.Width, Item2.Height, 10, 10));
-            Item3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item3.Width, Item3.Height, 10, 10));
-            Item4.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item4.Width, Item4.Height, 10, 10));
-            Item5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item5.Width, Item5.Height, 10, 10));
-            Item6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 10, 10));
-            Superitem.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Superitem.Width, Superitem.Height, 10, 10));
-            RankPiccuere.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 10, 10));
-            MainRune.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 10, 10));
-            SubRune.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 10, 10));
+            Item1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item1.Width, Item1.Height, 5, 5));
+            Item2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item2.Width, Item2.Height, 5, 5));
+            Item3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item3.Width, Item3.Height, 5, 5));
+            Item4.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item4.Width, Item4.Height, 5, 5));
+            Item5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item5.Width, Item5.Height, 5, 5));
+            Item6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 5, 5));
+            Superitem.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Superitem.Width, Superitem.Height, 5, 5));
+            RankPiccuere.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 5, 5));
+            MainRune.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 5, 5));
+            SubRune.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Item6.Width, Item6.Height, 5, 5));
 
 
             ChampionLogo.Image = GetImage(@"SummonerIcons\" + participant.championName + ".png", "https://ddragon.leagueoflegends.com/cdn/11.8.1/img/champion/" + participant.championName + ".png");
@@ -45,8 +49,10 @@ namespace LeageStats
             ChampionLvL.Text = participant.champLevel.ToString();
 
             SummonerName.Text = participant.summonerName;
-            Rank.Text = Constants.entryDTO.Tier.ToUpper()[0] + Constants.entryDTO.Tier.Substring(1).ToLower() + " " + Constants.entryDTO.Rank;
-            RankPiccuere.Image = Image.FromFile("emblems/Season_2019_-_" + Constants.entryDTO.Tier.ToUpper()[0] + Constants.entryDTO.Tier.Substring(1) + "_" + convertRomanToInt(Constants.entryDTO.Rank) + ".png");
+            var entry = ControlerProfile.GetPosition(participant.summonerId);
+
+            Rank.Text = entry.Tier.ToUpper()[0] + entry.Tier.Substring(1).ToLower() + " " + entry.Rank;
+            RankPiccuere.Image = Image.FromFile("emblems/Season_2019_-_" + entry.Tier.ToUpper()[0] + entry.Tier.Substring(1) + "_" + convertRomanToInt(entry.Rank) + ".png");
 
             KDA.Text = participant.kills + "/ " + participant.deaths + " /" + participant.assists;
             double d = participant.deaths, k = participant.kills, a = participant.assists;
@@ -56,7 +62,7 @@ namespace LeageStats
             double csm = tm / m;
             CS.Text = (participant.neutralMinionsKilled + participant.totalMinionsKilled).ToString();
 
-            Damauge.Text = participant.totalDamageDealt.ToString();
+            Damauge.Text = participant.totalDamageDealtToChampions.ToString();
             Gold.Text = Math.Round((decimal)participant.goldEarned / 1000, 1) + "k";
             Wards.Text = participant.wardsPlaced.ToString();
 
@@ -79,6 +85,7 @@ namespace LeageStats
             ChechItem(ref Item6, items[5]);
 
             SummonerName.Left = panel1.Width / 2 - SummonerName.Size.Width / 2;
+            Rank.Left = panel1.Width / 2 - Rank.Size.Width / 2;
             Damauge.Left = panel4.Width / 2 - Damauge.Size.Width / 2;
 
             KDA.Left = panel3.Width / 2 - KDA.Size.Width / 2;
@@ -205,6 +212,12 @@ namespace LeageStats
                 }
             }
 
+        }
+
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://"+Constants.Summoner.Region+".op.gg/summoner/userName="+ SummonerName.Text);
+            Process.Start(sInfo);
         }
     }
 }

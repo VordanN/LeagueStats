@@ -53,7 +53,6 @@ namespace LeageStats
             this.Item3 = new System.Windows.Forms.PictureBox();
             this.Item2 = new System.Windows.Forms.PictureBox();
             this.Item1 = new System.Windows.Forms.PictureBox();
-            this.Superitem = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.summonerName10 = new System.Windows.Forms.Label();
             this.summonerName9 = new System.Windows.Forms.Label();
@@ -75,6 +74,7 @@ namespace LeageStats
             this.summonerName3 = new System.Windows.Forms.Label();
             this.summonerName2 = new System.Windows.Forms.Label();
             this.summonerName1 = new System.Windows.Forms.Label();
+            this.Superitem = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SummoneSpeel2)).BeginInit();
@@ -88,7 +88,6 @@ namespace LeageStats
             ((System.ComponentModel.ISupportInitialize)(this.Item3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Superitem)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo5)).BeginInit();
@@ -100,6 +99,7 @@ namespace LeageStats
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Superitem)).BeginInit();
             this.SuspendLayout();
             // 
             // dicorativWLColor
@@ -109,6 +109,7 @@ namespace LeageStats
             this.dicorativWLColor.Name = "dicorativWLColor";
             this.dicorativWLColor.TabStop = false;
             this.dicorativWLColor.UseVisualStyleBackColor = false;
+            this.dicorativWLColor.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // panel1
             // 
@@ -118,26 +119,31 @@ namespace LeageStats
             this.panel1.Controls.Add(this.TimeWhenPlayed);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.panel1.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // GameTime
             // 
             resources.ApplyResources(this.GameTime, "GameTime");
             this.GameTime.Name = "GameTime";
+            this.GameTime.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // WORL
             // 
             resources.ApplyResources(this.WORL, "WORL");
             this.WORL.Name = "WORL";
+            this.WORL.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // GameMode
             // 
             resources.ApplyResources(this.GameMode, "GameMode");
             this.GameMode.Name = "GameMode";
+            this.GameMode.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // TimeWhenPlayed
             // 
             resources.ApplyResources(this.TimeWhenPlayed, "TimeWhenPlayed");
             this.TimeWhenPlayed.Name = "TimeWhenPlayed";
+            this.TimeWhenPlayed.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // panel2
             // 
@@ -147,18 +153,21 @@ namespace LeageStats
             this.panel2.Controls.Add(this.ChampionLogo);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            this.panel2.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // SummoneSpeel2
             // 
             resources.ApplyResources(this.SummoneSpeel2, "SummoneSpeel2");
             this.SummoneSpeel2.Name = "SummoneSpeel2";
             this.SummoneSpeel2.TabStop = false;
+            this.SummoneSpeel2.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // SummoneSpeel1
             // 
             resources.ApplyResources(this.SummoneSpeel1, "SummoneSpeel1");
             this.SummoneSpeel1.Name = "SummoneSpeel1";
             this.SummoneSpeel1.TabStop = false;
+            this.SummoneSpeel1.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // ChampionLvL
             // 
@@ -166,12 +175,14 @@ namespace LeageStats
             this.ChampionLvL.BackColor = System.Drawing.Color.Black;
             this.ChampionLvL.ForeColor = System.Drawing.Color.White;
             this.ChampionLvL.Name = "ChampionLvL";
+            this.ChampionLvL.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // ChampionLogo
             // 
             resources.ApplyResources(this.ChampionLogo, "ChampionLogo");
             this.ChampionLogo.Name = "ChampionLogo";
             this.ChampionLogo.TabStop = false;
+            this.ChampionLogo.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // panel3
             // 
@@ -180,21 +191,25 @@ namespace LeageStats
             this.panel3.Controls.Add(this.KDA);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            this.panel3.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // CS
             // 
             resources.ApplyResources(this.CS, "CS");
             this.CS.Name = "CS";
+            this.CS.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // KDAProsent
             // 
             resources.ApplyResources(this.KDAProsent, "KDAProsent");
             this.KDAProsent.Name = "KDAProsent";
+            this.KDAProsent.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // KDA
             // 
             resources.ApplyResources(this.KDA, "KDA");
             this.KDA.Name = "KDA";
+            this.KDA.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // panel4
             // 
@@ -207,11 +222,13 @@ namespace LeageStats
             this.panel4.Controls.Add(this.Item1);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
+            this.panel4.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Vision
             // 
             resources.ApplyResources(this.Vision, "Vision");
             this.Vision.Name = "Vision";
+            this.Vision.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Item6
             // 
@@ -219,6 +236,7 @@ namespace LeageStats
             resources.ApplyResources(this.Item6, "Item6");
             this.Item6.Name = "Item6";
             this.Item6.TabStop = false;
+            this.Item6.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Item5
             // 
@@ -226,6 +244,7 @@ namespace LeageStats
             resources.ApplyResources(this.Item5, "Item5");
             this.Item5.Name = "Item5";
             this.Item5.TabStop = false;
+            this.Item5.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Item4
             // 
@@ -233,6 +252,7 @@ namespace LeageStats
             resources.ApplyResources(this.Item4, "Item4");
             this.Item4.Name = "Item4";
             this.Item4.TabStop = false;
+            this.Item4.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Item3
             // 
@@ -240,6 +260,7 @@ namespace LeageStats
             resources.ApplyResources(this.Item3, "Item3");
             this.Item3.Name = "Item3";
             this.Item3.TabStop = false;
+            this.Item3.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Item2
             // 
@@ -247,6 +268,7 @@ namespace LeageStats
             resources.ApplyResources(this.Item2, "Item2");
             this.Item2.Name = "Item2";
             this.Item2.TabStop = false;
+            this.Item2.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // Item1
             // 
@@ -254,12 +276,7 @@ namespace LeageStats
             resources.ApplyResources(this.Item1, "Item1");
             this.Item1.Name = "Item1";
             this.Item1.TabStop = false;
-            // 
-            // Superitem
-            // 
-            resources.ApplyResources(this.Superitem, "Superitem");
-            this.Superitem.Name = "Superitem";
-            this.Superitem.TabStop = false;
+            this.Item1.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // panel5
             // 
@@ -285,116 +302,144 @@ namespace LeageStats
             this.panel5.Controls.Add(this.summonerName1);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
+            this.panel5.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName10
             // 
             resources.ApplyResources(this.summonerName10, "summonerName10");
             this.summonerName10.Name = "summonerName10";
+            this.summonerName10.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName9
             // 
             resources.ApplyResources(this.summonerName9, "summonerName9");
             this.summonerName9.Name = "summonerName9";
+            this.summonerName9.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName8
             // 
             resources.ApplyResources(this.summonerName8, "summonerName8");
             this.summonerName8.Name = "summonerName8";
+            this.summonerName8.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName7
             // 
             resources.ApplyResources(this.summonerName7, "summonerName7");
             this.summonerName7.Name = "summonerName7";
+            this.summonerName7.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName6
             // 
             resources.ApplyResources(this.summonerName6, "summonerName6");
             this.summonerName6.Name = "summonerName6";
+            this.summonerName6.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo10
             // 
             resources.ApplyResources(this.summonerLogo10, "summonerLogo10");
             this.summonerLogo10.Name = "summonerLogo10";
             this.summonerLogo10.TabStop = false;
+            this.summonerLogo10.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo5
             // 
             resources.ApplyResources(this.summonerLogo5, "summonerLogo5");
             this.summonerLogo5.Name = "summonerLogo5";
             this.summonerLogo5.TabStop = false;
+            this.summonerLogo5.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo9
             // 
             resources.ApplyResources(this.summonerLogo9, "summonerLogo9");
             this.summonerLogo9.Name = "summonerLogo9";
             this.summonerLogo9.TabStop = false;
+            this.summonerLogo9.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo4
             // 
             resources.ApplyResources(this.summonerLogo4, "summonerLogo4");
             this.summonerLogo4.Name = "summonerLogo4";
             this.summonerLogo4.TabStop = false;
+            this.summonerLogo4.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo8
             // 
             resources.ApplyResources(this.summonerLogo8, "summonerLogo8");
             this.summonerLogo8.Name = "summonerLogo8";
             this.summonerLogo8.TabStop = false;
+            this.summonerLogo8.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo3
             // 
             resources.ApplyResources(this.summonerLogo3, "summonerLogo3");
             this.summonerLogo3.Name = "summonerLogo3";
             this.summonerLogo3.TabStop = false;
+            this.summonerLogo3.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo7
             // 
             resources.ApplyResources(this.summonerLogo7, "summonerLogo7");
             this.summonerLogo7.Name = "summonerLogo7";
             this.summonerLogo7.TabStop = false;
+            this.summonerLogo7.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo2
             // 
             resources.ApplyResources(this.summonerLogo2, "summonerLogo2");
             this.summonerLogo2.Name = "summonerLogo2";
             this.summonerLogo2.TabStop = false;
+            this.summonerLogo2.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo6
             // 
             resources.ApplyResources(this.summonerLogo6, "summonerLogo6");
             this.summonerLogo6.Name = "summonerLogo6";
             this.summonerLogo6.TabStop = false;
+            this.summonerLogo6.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerLogo1
             // 
             resources.ApplyResources(this.summonerLogo1, "summonerLogo1");
             this.summonerLogo1.Name = "summonerLogo1";
             this.summonerLogo1.TabStop = false;
+            this.summonerLogo1.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName5
             // 
             resources.ApplyResources(this.summonerName5, "summonerName5");
             this.summonerName5.Name = "summonerName5";
+            this.summonerName5.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName4
             // 
             resources.ApplyResources(this.summonerName4, "summonerName4");
             this.summonerName4.Name = "summonerName4";
+            this.summonerName4.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName3
             // 
             resources.ApplyResources(this.summonerName3, "summonerName3");
             this.summonerName3.Name = "summonerName3";
+            this.summonerName3.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName2
             // 
             resources.ApplyResources(this.summonerName2, "summonerName2");
             this.summonerName2.Name = "summonerName2";
+            this.summonerName2.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // summonerName1
             // 
             resources.ApplyResources(this.summonerName1, "summonerName1");
             this.summonerName1.Name = "summonerName1";
+            this.summonerName1.Click += new System.EventHandler(this.MatchView_Click);
+            // 
+            // Superitem
+            // 
+            resources.ApplyResources(this.Superitem, "Superitem");
+            this.Superitem.Name = "Superitem";
+            this.Superitem.TabStop = false;
+            this.Superitem.Click += new System.EventHandler(this.MatchView_Click);
             // 
             // MatchView
             // 
@@ -428,7 +473,6 @@ namespace LeageStats
             ((System.ComponentModel.ISupportInitialize)(this.Item3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Item1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Superitem)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo10)).EndInit();
@@ -441,6 +485,7 @@ namespace LeageStats
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.summonerLogo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Superitem)).EndInit();
             this.ResumeLayout(false);
 
         }

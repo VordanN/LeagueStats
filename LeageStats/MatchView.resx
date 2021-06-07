@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="dicorativWLColor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dicorativWLColor.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -126,7 +129,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dicorativWLColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 12</value>
+    <value>8, 11</value>
   </data>
   <data name="dicorativWLColor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -150,6 +153,12 @@
   <data name="&gt;&gt;dicorativWLColor.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GameTime.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GameTime.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -183,6 +192,9 @@
   <data name="&gt;&gt;GameTime.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="WORL.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="WORL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -219,6 +231,9 @@
   <data name="&gt;&gt;WORL.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="GameMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GameMode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -252,6 +267,9 @@
   <data name="&gt;&gt;GameMode.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="TimeWhenPlayed.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="TimeWhenPlayed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -312,6 +330,12 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="panel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SummoneSpeel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="SummoneSpeel2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -339,6 +363,9 @@
   <data name="&gt;&gt;SummoneSpeel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="SummoneSpeel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="SummoneSpeel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -366,6 +393,9 @@
   <data name="&gt;&gt;SummoneSpeel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="ChampionLvL.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ChampionLvL.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -399,6 +429,9 @@
   <data name="&gt;&gt;ChampionLvL.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="ChampionLogo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ChampionLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -447,6 +480,12 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="panel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CS.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="CS.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -480,6 +519,9 @@
   <data name="&gt;&gt;CS.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="KDAProsent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="KDAProsent.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -513,6 +555,9 @@
   <data name="&gt;&gt;KDAProsent.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="KDA.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="KDA.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -567,11 +612,20 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="panel4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Vision.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Vision.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Vision.Font" type="System.Drawing.Font, System.Drawing">
     <value>Malgun Gothic, 8.25pt, style=Bold</value>
+  </data>
+  <data name="Vision.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="Vision.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 60</value>
@@ -597,6 +651,9 @@
   <data name="&gt;&gt;Vision.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Item6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Item6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -624,6 +681,9 @@
   <data name="&gt;&gt;Item6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="Item5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Item5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -651,6 +711,9 @@
   <data name="&gt;&gt;Item5.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="Item4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Item4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -678,6 +741,9 @@
   <data name="&gt;&gt;Item4.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="Item3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Item3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -705,6 +771,9 @@
   <data name="&gt;&gt;Item3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="Item2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Item2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -732,6 +801,9 @@
   <data name="&gt;&gt;Item2.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="Item1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Item1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -780,33 +852,12 @@
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Superitem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Superitem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 30</value>
-  </data>
-  <data name="Superitem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
-  </data>
-  <data name="Superitem.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="Superitem.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;Superitem.Name" xml:space="preserve">
-    <value>Superitem</value>
-  </data>
-  <data name="&gt;&gt;Superitem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Superitem.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Superitem.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  <metadata name="panel5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="summonerName10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -840,6 +891,9 @@
   <data name="&gt;&gt;summonerName10.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="summonerName9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -873,6 +927,9 @@
   <data name="&gt;&gt;summonerName9.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="summonerName8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -906,6 +963,9 @@
   <data name="&gt;&gt;summonerName8.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="summonerName7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -939,6 +999,9 @@
   <data name="&gt;&gt;summonerName7.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="summonerName6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -972,6 +1035,9 @@
   <data name="&gt;&gt;summonerName6.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="summonerLogo10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -999,6 +1065,9 @@
   <data name="&gt;&gt;summonerLogo10.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="summonerLogo5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1026,6 +1095,9 @@
   <data name="&gt;&gt;summonerLogo5.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="summonerLogo9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1053,6 +1125,9 @@
   <data name="&gt;&gt;summonerLogo9.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="summonerLogo4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1080,6 +1155,9 @@
   <data name="&gt;&gt;summonerLogo4.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="summonerLogo8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1107,6 +1185,9 @@
   <data name="&gt;&gt;summonerLogo8.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="summonerLogo3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1134,6 +1215,9 @@
   <data name="&gt;&gt;summonerLogo3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="summonerLogo7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1161,6 +1245,9 @@
   <data name="&gt;&gt;summonerLogo7.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="summonerLogo2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1188,6 +1275,9 @@
   <data name="&gt;&gt;summonerLogo2.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="summonerLogo6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1215,6 +1305,9 @@
   <data name="&gt;&gt;summonerLogo6.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <metadata name="summonerLogo1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerLogo1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1242,6 +1335,9 @@
   <data name="&gt;&gt;summonerLogo1.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="summonerName5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1275,6 +1371,9 @@
   <data name="&gt;&gt;summonerName5.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="summonerName4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1308,6 +1407,9 @@
   <data name="&gt;&gt;summonerName4.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <metadata name="summonerName3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1341,6 +1443,9 @@
   <data name="&gt;&gt;summonerName3.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <metadata name="summonerName2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1374,11 +1479,17 @@
   <data name="&gt;&gt;summonerName2.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <metadata name="summonerName1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="summonerName1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="summonerName1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Malgun Gothic, 6pt, style=Bold</value>
+  </data>
+  <data name="summonerName1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="summonerName1.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 14</value>
@@ -1425,7 +1536,40 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Superitem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Superitem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Superitem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>432, 30</value>
+  </data>
+  <data name="Superitem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="Superitem.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="Superitem.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Superitem.Name" xml:space="preserve">
+    <value>Superitem</value>
+  </data>
+  <data name="&gt;&gt;Superitem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Superitem.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Superitem.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -1435,7 +1579,7 @@
     <value>Malgun Gothic, 8.25pt</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>623, 88</value>
+    <value>627, 92</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MatchView</value>

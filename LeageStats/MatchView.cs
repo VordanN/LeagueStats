@@ -222,8 +222,8 @@ namespace LeageStats
 
         private void MatchView_Click(object sender, EventArgs e)
         {
-            //MatchStats matchStats = new MatchStats(game);
-            //matchStats.Show();
+            MatchStats matchStats = new MatchStats(game);
+            matchStats.Show();
 
         }
     }

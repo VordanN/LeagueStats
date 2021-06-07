@@ -133,6 +133,12 @@
     <Compile Include="MatchView.Designer.cs">
       <DependentUpon>MatchView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelStatMini.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModelStatMini.Designer.cs">
+      <DependentUpon>ModelStatMini.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\LeagueEntryDTO.cs" />
     <Compile Include="Model\MatchDto.cs" />
     <Compile Include="Model\Match\Ban.cs" />
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MatchView.resx">
       <DependentUpon>MatchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelStatMini.resx">
+      <DependentUpon>ModelStatMini.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
