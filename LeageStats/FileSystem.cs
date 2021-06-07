@@ -31,5 +31,9 @@ namespace FileSystem
         {
             data = JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(filePath));
         }
+        public static List<T> ReadJsontoList<T>(string filePath)
+        {
+            return JsonConvert.DeserializeObject<List<T>>(File.ReadAllText(filePath));
+        }
     }
 }

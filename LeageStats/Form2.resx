@@ -283,7 +283,7 @@
     <value>406, 3</value>
   </data>
   <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>709, 514</value>
+    <value>666, 514</value>
   </data>
   <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -394,7 +394,7 @@
     <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="Losses.Location" type="System.Drawing.Point, System.Drawing">
-    <value>494, 289</value>
+    <value>472, 289</value>
   </data>
   <data name="Losses.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 18</value>
@@ -424,7 +424,7 @@
     <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="Wins.Location" type="System.Drawing.Point, System.Drawing">
-    <value>411, 289</value>
+    <value>389, 289</value>
   </data>
   <data name="Wins.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 18</value>
@@ -502,7 +502,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1118, 520</value>
+    <value>1074, 520</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -523,7 +523,7 @@
     <value>Flat</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1105, 1</value>
+    <value>1067, 1</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 21</value>
@@ -550,7 +550,7 @@
     <value>Flat</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, -13</value>
+    <value>-11, -13</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1169, 35</value>
@@ -580,7 +580,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1136, 561</value>
+    <value>1097, 561</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>  Bredly.gg</value>

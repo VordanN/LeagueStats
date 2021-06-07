@@ -2,9 +2,12 @@
 using LeageStats.API;
 using LeageStats.Controller;
 using LeageStats.Utilits;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Windows.Forms;
 namespace LeageStats
 {
@@ -87,6 +90,5 @@ namespace LeageStats
         {
             Application.Exit();
         }
-
     }
 }

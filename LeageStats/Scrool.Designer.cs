@@ -31,14 +31,14 @@ namespace LeageStats
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scrool));
             this.InputPanel = new System.Windows.Forms.Panel();
+            this.End = new System.Windows.Forms.TextBox();
+            this.Start = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
             this.SServerLable = new System.Windows.Forms.Label();
             this.SNameLable = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Start = new System.Windows.Forms.TextBox();
-            this.End = new System.Windows.Forms.TextBox();
             this.InputPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,11 +52,25 @@ namespace LeageStats
             this.InputPanel.Controls.Add(this.SServerLable);
             this.InputPanel.Controls.Add(this.SNameLable);
             this.InputPanel.ForeColor = System.Drawing.Color.White;
-            this.InputPanel.Location = new System.Drawing.Point(19, 167);
+            this.InputPanel.Location = new System.Drawing.Point(19, 150);
             this.InputPanel.Margin = new System.Windows.Forms.Padding(10, 20, 0, 0);
             this.InputPanel.Name = "InputPanel";
             this.InputPanel.Size = new System.Drawing.Size(296, 189);
             this.InputPanel.TabIndex = 11;
+            // 
+            // End
+            // 
+            this.End.Location = new System.Drawing.Point(0, 102);
+            this.End.Name = "End";
+            this.End.Size = new System.Drawing.Size(296, 20);
+            this.End.TabIndex = 5;
+            // 
+            // Start
+            // 
+            this.Start.Location = new System.Drawing.Point(0, 36);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(296, 20);
+            this.Start.TabIndex = 5;
             // 
             // search
             // 
@@ -113,12 +127,13 @@ namespace LeageStats
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(308, 11);
+            this.button2.Location = new System.Drawing.Point(302, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 21);
             this.button2.TabIndex = 14;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -131,10 +146,13 @@ namespace LeageStats
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button1.Location = new System.Drawing.Point(-49, -3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(433, 35);
+            this.button1.Size = new System.Drawing.Size(433, 28);
             this.button1.TabIndex = 13;
             this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
             // 
             // pictureBox1
             // 
@@ -142,32 +160,18 @@ namespace LeageStats
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(216, 179);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // Start
-            // 
-            this.Start.Location = new System.Drawing.Point(0, 36);
-            this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(296, 20);
-            this.Start.TabIndex = 5;
-             // 
-            // End
-            // 
-            this.End.Location = new System.Drawing.Point(0, 102);
-            this.End.Name = "End";
-            this.End.Size = new System.Drawing.Size(296, 20);
-            this.End.TabIndex = 5;
-             // 
             // Scrool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(43)))), ((int)(((byte)(78)))));
-            this.ClientSize = new System.Drawing.Size(334, 363);
+            this.ClientSize = new System.Drawing.Size(334, 350);
             this.Controls.Add(this.InputPanel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

@@ -159,6 +159,7 @@
     <Compile Include="Model\Match\Tower.cs" />
     <Compile Include="Model\ModelProfile.cs" />
     <Compile Include="Model\ModelStat.cs" />
+    <Compile Include="Model\Runes\Runes.cs" />
     <Compile Include="Model\SummonerDTO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

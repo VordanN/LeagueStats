@@ -68,7 +68,7 @@ namespace LeageStats
 
         private bool dragging;
         private Point pointClicked;
-        private void MouseDown(object sender, MouseEventArgs e)
+        private new void MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -80,7 +80,7 @@ namespace LeageStats
                 dragging = false;
             }
         }
-        private void MouseMove(object sender, MouseEventArgs e)
+        private new void MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
             {
@@ -92,7 +92,7 @@ namespace LeageStats
                 this.Location = pointMoveTo;
             }
         }
-        private void MouseUp(object sender, MouseEventArgs e)
+        private new void MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }

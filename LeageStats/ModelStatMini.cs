@@ -47,6 +47,17 @@ namespace LeageStats
             SummoneSpeel1.Image = Image.FromFile(@"SummonerSpells\" + participant.summoner1Id + ".png");
             SummoneSpeel2.Image = Image.FromFile(@"SummonerSpells\" + participant.summoner2Id + ".png");
             ChampionLvL.Text = participant.champLevel.ToString();
+           /* try
+            {
+                MainRune.Image = Image.FromFile(@"Runes\" + participant.perks.styles[0].style + ".png");
+                SubRune.Image = Image.FromFile(@"Runes\" + participant.perks.styles[1].style + ".png");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }*/
+
 
             SummonerName.Text = participant.summonerName;
             var entry = ControlerProfile.GetPosition(participant.summonerId);

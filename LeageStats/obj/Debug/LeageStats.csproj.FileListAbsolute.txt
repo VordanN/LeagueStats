@@ -144,3 +144,14 @@ C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\ru\LeageStats.resourc
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.MatchStats.resources
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.Scrool.resources
 C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\obj\Debug\LeageStats.ModelStatMini.resources
+Z:\Bradley\LeageStats\LeageStats\bin\Debug\en\LeageStats.resources.dll
+Z:\Bradley\LeageStats\LeageStats\bin\Debug\ru\LeageStats.resources.dll
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.MatchStats.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.ModelStatMini.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.Scrool.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.Form1.en.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.Form1.ru.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.Form2.en.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\LeageStats.MatchView.en.resources
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\en\LeageStats.resources.dll
+Z:\Bradley\LeageStats\LeageStats\obj\Debug\ru\LeageStats.resources.dll

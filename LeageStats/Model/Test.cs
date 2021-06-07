@@ -78,7 +78,7 @@ namespace LeageStats.Model
         public StatPerks1 statPerks { get; set; }
         public List<Style1> styles { get; set; }
     }
-
+    
     public class Participant1
     {
         public Participant1()
