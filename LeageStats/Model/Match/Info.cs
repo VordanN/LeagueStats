@@ -7,24 +7,12 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Model.Match
 {
-
+    /// <summary>
+    /// Основной класс в котором описана вся игра
+    /// </summary>
     public class Info
     {
-        public Info(
-            long gameCreation,
-            int gameDuration,
-            int gameId,
-            string gameMode,
-            string gameName,
-            long gameStartTimestamp,
-            string gameType,
-            string gameVersion,
-            int mapId,
-            List<Participant> participants,
-            string platformId,
-            int queueId,
-            List<Team> teams
-        )
+        public Info(long gameCreation, int gameDuration, int gameId, string gameMode, string gameName, long gameStartTimestamp, string gameType, string gameVersion, int mapId, List<Participant> participants, string platformId, int queueId, List<Team> teams)
         {
             this.gameCreation = gameCreation;
             this.gameDuration = gameDuration;
@@ -41,20 +29,19 @@ namespace LeageStats.Model.Match
             this.teams = teams;
         }
 
-        public long gameCreation { get; }
-        public int gameDuration { get; }
-        public int gameId { get; }
-        public string gameMode { get; }
-        public string gameName { get; }
-        public long gameStartTimestamp { get; }
-        public string gameType { get; }
-        public string gameVersion { get; }
-        public int mapId { get; }
-        public List<Participant> participants { get; }
-        public string platformId { get; }
-        public int queueId { get; }
-        public List<Team> teams { get; }
+        public long gameCreation { get; set; }
+        public int gameDuration { get; set; }
+        public int gameId { get; set; }
+        public string gameMode { get; set; }
+        public string gameName { get; set; }
+        public long gameStartTimestamp { get; set; }
+        public string gameType { get; set; }
+        public string gameVersion { get; set; }
+        public int mapId { get; set; }
+        public List<Participant> participants { get; set; }
+        public string platformId { get; set; }
+        public int queueId { get; set; }
+        public List<Team> teams { get; set; }
     }
-
 
 }

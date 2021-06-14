@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace LeageStats.API
 {
+    /// <summary>
+    /// Класс персонажа который роботает с апи
+    /// </summary>
     public class Summoner_V4 : API
     {
         public Summoner_V4(string region) : base(region)
         {
         }
-
+        
         public SummonerDTO GetSummonerByName(string SummonerName)
         {
             string path = "summoner/v4/summoners/by-name/"+SummonerName;

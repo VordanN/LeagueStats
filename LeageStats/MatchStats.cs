@@ -1,13 +1,9 @@
 ﻿using LeageStats.Model;
+using LeageStats.Model.Match;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LeageStats
@@ -15,19 +11,19 @@ namespace LeageStats
     public partial class MatchStats : Form
     {
 
-        public MatchStats(Root game)
+        public MatchStats(MatchDto game)
         {
             InitializeComponent();
-            List<Participant1> RedSide = new List<Participant1>();  //200
-            List<Participant1> BlueSide = new List<Participant1>(); //100
+            List<Participant> RedSide = new List<Participant>();  //200
+            List<Participant> BlueSide = new List<Participant>(); //100
 
-            
-            foreach (Participant1 participant in game.info.participants)
+            foreach (Participant participant in game.info.participants)
             {
                 if (participant.teamId == 100)
                 {
                     BlueSide.Add(participant);
-                }else if(participant.teamId == 200)
+                }
+                else if (participant.teamId == 200)
                 {
                     RedSide.Add(participant);
                 }
@@ -37,28 +33,16 @@ namespace LeageStats
 
 
             flowLayoutPanel1.Controls.Add(Redside);
-            foreach (var item in RedSide)
+            foreach (Participant item in RedSide)
             {
                 flowLayoutPanel1.Controls.Add(new ModelStatMini(item, new DateTime().AddMilliseconds(double.Parse(game.info.gameDuration.ToString()))));
             }
             flowLayoutPanel1.Controls.Add(Blueside);
-            foreach (var item in BlueSide)
+            foreach (Participant item in BlueSide)
             {
                 flowLayoutPanel1.Controls.Add(new ModelStatMini(item, new DateTime().AddMilliseconds(double.Parse(game.info.gameDuration.ToString()))));
             }
         }
-
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
-        );
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -85,11 +69,11 @@ namespace LeageStats
             if (dragging)
             {
                 Point pointMoveTo;
-                pointMoveTo = this.PointToScreen(new Point(e.X, e.Y));
+                pointMoveTo = PointToScreen(new Point(e.X, e.Y));
 
                 pointMoveTo.Offset(-pointClicked.X, -pointClicked.Y);
 
-                this.Location = pointMoveTo;
+                Location = pointMoveTo;
             }
         }
         private new void MouseUp(object sender, MouseEventArgs e)

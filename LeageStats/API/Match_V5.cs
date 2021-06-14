@@ -9,7 +9,9 @@ using System.Text;
 
 namespace LeageStats.API
 {
-
+    /// <summary>
+    /// класс который позволяет получать матчи используя апи
+    /// </summary>
     public class Match_V5 : API
     {
         public Match_V5(string region) : base(region)
@@ -18,37 +20,37 @@ namespace LeageStats.API
 
 
 
-        public Root Read(string matchId)
+        public MatchDto Read(string matchId)
         {
             using (BinaryReader reader = new BinaryReader(File.Open(@"Matches\" + Constants.Summoner.Id + @"\" + matchId, FileMode.Open)))
             {
                 byte[] bytes = reader.ReadBytes(int.Parse(reader.BaseStream.Length.ToString()));
-                return Utf8Json.JsonSerializer.Deserialize<Root>(bytes);
+                return Utf8Json.JsonSerializer.Deserialize<MatchDto>(bytes);
             }
 
         }
 
-        public Root GetModelSat(string matchId)
+        public MatchDto GetModelSat(string matchId)
         {
             string path = "match/v5/matches/" + matchId;
-            _ = new Root();
-            Root root;
+            _ = new MatchDto();
+            MatchDto root;
             if (File.Exists(@"Matches\" + Constants.Summoner.Id + @"\" + matchId))
             {
-                root = ReadWrite.ReadJson<Root>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId);
+                root = ReadWrite.ReadJson<MatchDto>(@"Matches\" + Constants.Summoner.Id + @"\" + matchId);
             }
             else
             {
                 try
                 {
                     string request;
-                    using (var client = new WebClient())
-                    using (var stream = client.OpenRead(GetURL(path, true)))
-                    using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+                    using (WebClient client = new WebClient())
+                    using (Stream stream = client.OpenRead(GetURL(path, true)))
+                    using (StreamReader textReader = new StreamReader(stream, Encoding.UTF8, true))
                     {
                         request = textReader.ReadToEnd();
                     }
-                    root = JsonConvert.DeserializeObject<Root>(request);
+                    root = JsonConvert.DeserializeObject<MatchDto>(request);
                     ReadWrite.WriteJson(root, @"Matches\" + Constants.Summoner.Id + @"\" + matchId);
                 }
                 catch (System.Exception)
@@ -61,13 +63,21 @@ namespace LeageStats.API
 
             return root;
         }
+        public int a()
+        {
+            _ = new int();
+            _ = 5;
+
+
+            return 5;
+        }
 
         public MatchDto GetMatchByMatchID(string matchId)
         {
             string path = "match/v5/matches/" + matchId;
             using (WebClient w = new WebClient())
             {
-                var json = w.DownloadString(GetURL(path, true));
+                string json = w.DownloadString(GetURL(path, true));
                 return JsonConvert.DeserializeObject<MatchDto>(json);
             }
         }
@@ -87,7 +97,7 @@ namespace LeageStats.API
         {
             string path = "match/v5/matches/by-puuid/" + puuid + "/ids?start=" + start + "&count=" + count;
 
-            var response = GET(GetURL(path, true, true));
+            System.Net.Http.HttpResponseMessage response = GET(GetURL(path, true, true));
             string context = response.Content.ReadAsStringAsync().Result;
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)

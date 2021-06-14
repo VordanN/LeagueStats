@@ -98,6 +98,7 @@ namespace LeageStats
             // 
             // SummoneSpeel2
             // 
+            this.SummoneSpeel2.BackColor = System.Drawing.Color.DarkGray;
             this.SummoneSpeel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.SummoneSpeel2.Location = new System.Drawing.Point(48, 25);
             this.SummoneSpeel2.Name = "SummoneSpeel2";
@@ -109,6 +110,7 @@ namespace LeageStats
             // 
             // SubRune
             // 
+            this.SubRune.BackColor = System.Drawing.Color.Gainsboro;
             this.SubRune.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.SubRune.Location = new System.Drawing.Point(67, 25);
             this.SubRune.Name = "SubRune";
@@ -120,17 +122,19 @@ namespace LeageStats
             // 
             // MainRune
             // 
+            this.MainRune.BackColor = System.Drawing.Color.Gainsboro;
             this.MainRune.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MainRune.Location = new System.Drawing.Point(67, 4);
             this.MainRune.Name = "MainRune";
             this.MainRune.Size = new System.Drawing.Size(15, 15);
-            this.MainRune.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MainRune.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MainRune.TabIndex = 5;
             this.MainRune.TabStop = false;
             this.MainRune.Click += new System.EventHandler(this.panel9_Click);
             // 
             // SummoneSpeel1
             // 
+            this.SummoneSpeel1.BackColor = System.Drawing.Color.DarkGray;
             this.SummoneSpeel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.SummoneSpeel1.Location = new System.Drawing.Point(48, 4);
             this.SummoneSpeel1.Name = "SummoneSpeel1";

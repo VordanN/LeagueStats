@@ -6,116 +6,19 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Model.Match
 {
+    /// <summary>
+    /// я кстати один раз писал его своими ручками
+    /// и конструктор
+    /// авыхха
+    /// класс информации о игроке и его персонажа
+    /// </summary>
     public class Participant
     {
         public Participant()
         {
         }
 
-        public Participant(
-            int assists,
-            int baronKills,
-            int bountyLevel,
-            int champExperience,
-            int champLevel,
-            int championId,
-            string championName,
-            int championTransform,
-            int consumablesPurchased,
-            int damageDealtToBuildings,
-            int damageDealtToObjectives,
-            int damageDealtToTurrets,
-            int damageSelfMitigated,
-            int deaths,
-            int detectorWardsPlaced,
-            int doubleKills,
-            int dragonKills,
-            bool firstBloodAssist,
-            bool firstBloodKill,
-            bool firstTowerAssist,
-            bool firstTowerKill,
-            bool gameEndedInEarlySurrender,
-            bool gameEndedInSurrender,
-            int goldEarned,
-            int goldSpent,
-            string individualPosition,
-            int inhibitorKills,
-            int inhibitorsLost,
-            int item0,
-            int item1,
-            int item2,
-            int item3,
-            int item4,
-            int item5,
-            int item6,
-            int itemsPurchased,
-            int killingSprees,
-            int kills,
-            string lane,
-            int largestCriticalStrike,
-            int largestKillingSpree,
-            int largestMultiKill,
-            int longestTimeSpentLiving,
-            int magicDamageDealt,
-            int magicDamageDealtToChampions,
-            int magicDamageTaken,
-            int neutralMinionsKilled,
-            int nexusKills,
-            int nexusLost,
-            int objectivesStolen,
-            int objectivesStolenAssists,
-            int participantId,
-            int pentaKills,
-            Perks perks,
-            int physicalDamageDealt,
-            int physicalDamageDealtToChampions,
-            int physicalDamageTaken,
-            int profileIcon,
-            string puuid,
-            int quadraKills,
-            string riotIdName,
-            string riotIdTagline,
-            string role,
-            int sightWardsBoughtInGame,
-            int spell1Casts,
-            int spell2Casts,
-            int spell3Casts,
-            int spell4Casts,
-            int summoner1Casts,
-            int summoner1Id,
-            int summoner2Casts,
-            int summoner2Id,
-            string summonerId,
-            int summonerLevel,
-            string summonerName,
-            bool teamEarlySurrendered,
-            int teamId,
-            string teamPosition,
-            int timeCCingOthers,
-            int timePlayed,
-            int totalDamageDealt,
-            int totalDamageDealtToChampions,
-            int totalDamageShieldedOnTeammates,
-            int totalDamageTaken,
-            int totalHeal,
-            int totalHealsOnTeammates,
-            int totalMinionsKilled,
-            int totalTimeCCDealt,
-            int totalTimeSpentDead,
-            int totalUnitsHealed,
-            int tripleKills,
-            int trueDamageDealt,
-            int trueDamageDealtToChampions,
-            int trueDamageTaken,
-            int turretKills,
-            int turretsLost,
-            int unrealKills,
-            int visionScore,
-            int visionWardsBoughtInGame,
-            int wardsKilled,
-            int wardsPlaced,
-            bool win
-        )
+        public Participant(int assists, int baronKills, int bountyLevel, int champExperience, int champLevel, int championId, string championName, int championTransform, int consumablesPurchased, int damageDealtToBuildings, int damageDealtToObjectives, int damageDealtToTurrets, int damageSelfMitigated, int deaths, int detectorWardsPlaced, int doubleKills, int dragonKills, bool firstBloodAssist, bool firstBloodKill, bool firstTowerAssist, bool firstTowerKill, bool gameEndedInEarlySurrender, bool gameEndedInSurrender, int goldEarned, int goldSpent, string individualPosition, int inhibitorKills, int inhibitorsLost, int item0, int item1, int item2, int item3, int item4, int item5, int item6, int itemsPurchased, int killingSprees, int kills, string lane, int largestCriticalStrike, int largestKillingSpree, int largestMultiKill, int longestTimeSpentLiving, int magicDamageDealt, int magicDamageDealtToChampions, int magicDamageTaken, int neutralMinionsKilled, int nexusKills, int nexusLost, int objectivesStolen, int objectivesStolenAssists, int participantId, int pentaKills, Perks perks, int physicalDamageDealt, int physicalDamageDealtToChampions, int physicalDamageTaken, int profileIcon, string puuid, int quadraKills, string riotIdName, string riotIdTagline, string role, int sightWardsBoughtInGame, int spell1Casts, int spell2Casts, int spell3Casts, int spell4Casts, int summoner1Casts, int summoner1Id, int summoner2Casts, int summoner2Id, string summonerId, int summonerLevel, string summonerName, bool teamEarlySurrendered, int teamId, string teamPosition, int timeCCingOthers, int timePlayed, int totalDamageDealt, int totalDamageDealtToChampions, int totalDamageShieldedOnTeammates, int totalDamageTaken, int totalHeal, int totalHealsOnTeammates, int totalMinionsKilled, int totalTimeCCDealt, int totalTimeSpentDead, int totalUnitsHealed, int tripleKills, int trueDamageDealt, int trueDamageDealtToChampions, int trueDamageTaken, int turretKills, int turretsLost, int unrealKills, int visionScore, int visionWardsBoughtInGame, int wardsKilled, int wardsPlaced, bool win)
         {
             this.assists = assists;
             this.baronKills = baronKills;
@@ -221,108 +124,108 @@ namespace LeageStats.Model.Match
             this.win = win;
         }
 
-        public int assists { get; }
-        public int baronKills { get; }
-        public int bountyLevel { get; }
-        public int champExperience { get; }
-        public int champLevel { get; }
-        public int championId { get; }
-        public string championName { get; }
-        public int championTransform { get; }
-        public int consumablesPurchased { get; }
-        public int damageDealtToBuildings { get; }
-        public int damageDealtToObjectives { get; }
-        public int damageDealtToTurrets { get; }
-        public int damageSelfMitigated { get; }
-        public int deaths { get; }
-        public int detectorWardsPlaced { get; }
-        public int doubleKills { get; }
-        public int dragonKills { get; }
-        public bool firstBloodAssist { get; }
-        public bool firstBloodKill { get; }
-        public bool firstTowerAssist { get; }
-        public bool firstTowerKill { get; }
-        public bool gameEndedInEarlySurrender { get; }
-        public bool gameEndedInSurrender { get; }
-        public int goldEarned { get; }
-        public int goldSpent { get; }
-        public string individualPosition { get; }
-        public int inhibitorKills { get; }
-        public int inhibitorsLost { get; }
-        public int item0 { get; }
-        public int item1 { get; }
-        public int item2 { get; }
-        public int item3 { get; }
-        public int item4 { get; }
-        public int item5 { get; }
-        public int item6 { get; }
-        public int itemsPurchased { get; }
-        public int killingSprees { get; }
-        public int kills { get; }
-        public string lane { get; }
-        public int largestCriticalStrike { get; }
-        public int largestKillingSpree { get; }
-        public int largestMultiKill { get; }
-        public int longestTimeSpentLiving { get; }
-        public int magicDamageDealt { get; }
-        public int magicDamageDealtToChampions { get; }
-        public int magicDamageTaken { get; }
-        public int neutralMinionsKilled { get; }
-        public int nexusKills { get; }
-        public int nexusLost { get; }
-        public int objectivesStolen { get; }
-        public int objectivesStolenAssists { get; }
-        public int participantId { get; }
-        public int pentaKills { get; }
-        public Perks perks { get; }
-        public int physicalDamageDealt { get; }
-        public int physicalDamageDealtToChampions { get; }
-        public int physicalDamageTaken { get; }
-        public int profileIcon { get; }
-        public string puuid { get; }
-        public int quadraKills { get; }
-        public string riotIdName { get; }
-        public string riotIdTagline { get; }
-        public string role { get; }
-        public int sightWardsBoughtInGame { get; }
-        public int spell1Casts { get; }
-        public int spell2Casts { get; }
-        public int spell3Casts { get; }
-        public int spell4Casts { get; }
-        public int summoner1Casts { get; }
-        public int summoner1Id { get; }
-        public int summoner2Casts { get; }
-        public int summoner2Id { get; }
-        public string summonerId { get; }
-        public int summonerLevel { get; }
-        public string summonerName { get; }
-        public bool teamEarlySurrendered { get; }
-        public int teamId { get; }
-        public string teamPosition { get; }
-        public int timeCCingOthers { get; }
-        public int timePlayed { get; }
-        public int totalDamageDealt { get; }
-        public int totalDamageDealtToChampions { get; }
-        public int totalDamageShieldedOnTeammates { get; }
-        public int totalDamageTaken { get; }
-        public int totalHeal { get; }
-        public int totalHealsOnTeammates { get; }
-        public int totalMinionsKilled { get; }
-        public int totalTimeCCDealt { get; }
-        public int totalTimeSpentDead { get; }
-        public int totalUnitsHealed { get; }
-        public int tripleKills { get; }
-        public int trueDamageDealt { get; }
-        public int trueDamageDealtToChampions { get; }
-        public int trueDamageTaken { get; }
-        public int turretKills { get; }
-        public int turretsLost { get; }
-        public int unrealKills { get; }
-        public int visionScore { get; }
-        public int visionWardsBoughtInGame { get; }
-        public int wardsKilled { get; }
-        public int wardsPlaced { get; }
-        public bool win { get; }
+        public int assists { get; set; }
+        public int baronKills { get; set; }
+        public int bountyLevel { get; set; }
+        public int champExperience { get; set; }
+        public int champLevel { get; set; }
+        public int championId { get; set; }
+        public string championName { get; set; }
+        public int championTransform { get; set; }
+        public int consumablesPurchased { get; set; }
+        public int damageDealtToBuildings { get; set; }
+        public int damageDealtToObjectives { get; set; }
+        public int damageDealtToTurrets { get; set; }
+        public int damageSelfMitigated { get; set; }
+        public int deaths { get; set; }
+        public int detectorWardsPlaced { get; set; }
+        public int doubleKills { get; set; }
+        public int dragonKills { get; set; }
+        public bool firstBloodAssist { get; set; }
+        public bool firstBloodKill { get; set; }
+        public bool firstTowerAssist { get; set; }
+        public bool firstTowerKill { get; set; }
+        public bool gameEndedInEarlySurrender { get; set; }
+        public bool gameEndedInSurrender { get; set; }
+        public int goldEarned { get; set; }
+        public int goldSpent { get; set; }
+        public string individualPosition { get; set; }
+        public int inhibitorKills { get; set; }
+        public int inhibitorsLost { get; set; }
+        public int item0 { get; set; }
+        public int item1 { get; set; }
+        public int item2 { get; set; }
+        public int item3 { get; set; }
+        public int item4 { get; set; }
+        public int item5 { get; set; }
+        public int item6 { get; set; }
+        public int itemsPurchased { get; set; }
+        public int killingSprees { get; set; }
+        public int kills { get; set; }
+        public string lane { get; set; }
+        public int largestCriticalStrike { get; set; }
+        public int largestKillingSpree { get; set; }
+        public int largestMultiKill { get; set; }
+        public int longestTimeSpentLiving { get; set; }
+        public int magicDamageDealt { get; set; }
+        public int magicDamageDealtToChampions { get; set; }
+        public int magicDamageTaken { get; set; }
+        public int neutralMinionsKilled { get; set; }
+        public int nexusKills { get; set; }
+        public int nexusLost { get; set; }
+        public int objectivesStolen { get; set; }
+        public int objectivesStolenAssists { get; set; }
+        public int participantId { get; set; }
+        public int pentaKills { get; set; }
+        public Perks perks { get; set; }
+        public int physicalDamageDealt { get; set; }
+        public int physicalDamageDealtToChampions { get; set; }
+        public int physicalDamageTaken { get; set; }
+        public int profileIcon { get; set; }
+        public string puuid { get; set; }
+        public int quadraKills { get; set; }
+        public string riotIdName { get; set; }
+        public string riotIdTagline { get; set; }
+        public string role { get; set; }
+        public int sightWardsBoughtInGame { get; set; }
+        public int spell1Casts { get; set; }
+        public int spell2Casts { get; set; }
+        public int spell3Casts { get; set; }
+        public int spell4Casts { get; set; }
+        public int summoner1Casts { get; set; }
+        public int summoner1Id { get; set; }
+        public int summoner2Casts { get; set; }
+        public int summoner2Id { get; set; }
+        public string summonerId { get; set; }
+        public int summonerLevel { get; set; }
+        public string summonerName { get; set; }
+        public bool teamEarlySurrendered { get; set; }
+        public int teamId { get; set; }
+        public string teamPosition { get; set; }
+        public int timeCCingOthers { get; set; }
+        public int timePlayed { get; set; }
+        public int totalDamageDealt { get; set; }
+        public int totalDamageDealtToChampions { get; set; }
+        public int totalDamageShieldedOnTeammates { get; set; }
+        public int totalDamageTaken { get; set; }
+        public int totalHeal { get; set; }
+        public int totalHealsOnTeammates { get; set; }
+        public int totalMinionsKilled { get; set; }
+        public int totalTimeCCDealt { get; set; }
+        public int totalTimeSpentDead { get; set; }
+        public int totalUnitsHealed { get; set; }
+        public int tripleKills { get; set; }
+        public int trueDamageDealt { get; set; }
+        public int trueDamageDealtToChampions { get; set; }
+        public int trueDamageTaken { get; set; }
+        public int turretKills { get; set; }
+        public int turretsLost { get; set; }
+        public int unrealKills { get; set; }
+        public int visionScore { get; set; }
+        public int visionWardsBoughtInGame { get; set; }
+        public int wardsKilled { get; set; }
+        public int wardsPlaced { get; set; }
+        public bool win { get; set; }
     }
 }
 

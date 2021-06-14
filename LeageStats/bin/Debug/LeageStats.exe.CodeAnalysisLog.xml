@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\professional\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="16.0">
  <Targets>
-  <Target Name="Z:\Bradley\LeageStats\LeageStats\bin\Debug\LeageStats.exe">
+  <Target Name="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\bin\Debug\LeageStats.exe">
    <Modules>
     <Module Name="leagestats.exe">
      <Namespaces>
@@ -12,56 +12,8 @@
          <Members>
           <Member Name="#WriteJson(System.Object,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-07 17:00:11Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="Z:\Bradley\LeageStats\LeageStats" File="FileSystem.cs" Line="18">Object 'fs' can be disposed more than once in method 'ReadWrite.WriteJson(object, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 18</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-       </Types>
-      </Namespace>
-      <Namespace Name="LeageStats">
-       <Types>
-        <Type Name="Form2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#CreateRoundRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
-           <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2021-06-07 17:00:11Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Form2.CreateRoundRectRgn(int, int, int, int, int, int)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-        <Type Name="MatchStats" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#CreateRoundRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
-           <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2021-06-07 17:00:11Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'MatchStats.CreateRoundRectRgn(int, int, int, int, int, int)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-        <Type Name="MatchView" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#CreateRoundRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
-           <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2021-06-07 17:00:11Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'MatchView.CreateRoundRectRgn(int, int, int, int, int, int)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
-            </Message>
-           </Messages>
-          </Member>
-         </Members>
-        </Type>
-        <Type Name="ModelStatMini" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Members>
-          <Member Name="#CreateRoundRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
-           <Messages>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2021-06-07 17:00:11Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'ModelStatMini.CreateRoundRectRgn(int, int, int, int, int, int)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
+            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-14 22:56:02Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats" File="FileSystem.cs" Line="18">Объект "'fs'" можно удалять более одного раза в методе 'ReadWrite.WriteJson(object, string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 18</Issue>
             </Message>
            </Messages>
           </Member>
@@ -75,8 +27,26 @@
          <Members>
           <Member Name="#GetModelSat(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-07 17:00:11Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="Z:\Bradley\LeageStats\LeageStats\API" File="Match_V5.cs" Line="50">Object 'stream' can be disposed more than once in method 'Match_V5.GetModelSat(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 50</Issue>
+            <Message TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2021-06-14 22:56:02Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\SWAG\Source\Repos\LeageStats\LeageStats\API" File="Match_V5.cs" Line="52">Объект "'stream'" можно удалять более одного раза в методе 'Match_V5.GetModelSat(string)'. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 52</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="LeageStats.Utilits">
+       <Types>
+        <Type Name="Constants" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateRoundRectRgn(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2021-06-14 22:56:02Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Так как метод является методом P/Invoke, 'Constants.CreateRoundRectRgn(int, int, int, int, int, int)' должен быть определен в классе с именем NativeMethods, SafeNativeMethods или UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2021-06-14 22:56:02Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Измените уровень доступа P/Invoke 'Constants.CreateRoundRectRgn(int, int, int, int, int, int)', чтобы он не был виден извне своей сборки.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -90,49 +60,59 @@
   </Target>
  </Targets>
  <Rules>
-  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
-   <Name>Do not dispose objects multiple times</Name>
-   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
-   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 50</Resolution>
-   <Owner>RuleOwner</Owner>
-   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
-   <Email />
-   <MessageLevel Certainty="75">Warning</MessageLevel>
-   <File Name="dataflowrules.dll" Version="16.0.0.0" />
-  </Rule>
   <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
-   <Name>Move P/Invokes to NativeMethods class</Name>
-   <Description>This type contains members with the DllImport attribute. Members with the DllImport attribute should be contained in classes named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Description>
-   <Resolution Name="Default">Because it is a P/Invoke method, {0} should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Resolution>
+   <Name>Переместите методы P/Invoke в класс NativeMethods</Name>
+   <Description>В этом типе содержатся члены с атрибутом DllImport. Члены с атрибутом DllImport должны содержаться в классах с именем NativeMethods, SafeNativeMethods или UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Так как метод является методом P/Invoke, {0} должен быть определен в классе с именем NativeMethods, SafeNativeMethods или UnsafeNativeMethods.</Resolution>
    <Owner />
    <Url>http://msdn.microsoft.com/library/ms182161.aspx</Url>
    <Email>[none]</Email>
    <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
    <File Name="designrules.dll" Version="16.0.0.0" />
   </Rule>
+  <Rule TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401">
+   <Name>Методы P/Invoke не должны быть видимыми</Name>
+   <Description>Уровень взаимодействия не должен быть открытым. Не следует применять атрибут DllImport к открыто доступным членам (открытым или защищенным).</Description>
+   <Resolution Name="Default">Измените уровень доступа P/Invoke {0}, чтобы он не был виден извне своей сборки.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182209.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalError</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="16.0.0.0" />
+  </Rule>
+  <Rule TypeName="Не ликвидировать объекты несколько раз" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Не ликвидировать объекты несколько раз</Name>
+   <Description>Правильно реализованный метод Dispose может вызываться неоднократно без создания исключения. Однако такой гарантии нет, и чтобы предотвратить создание System.ObjectDisposedException, не следует вызывать метод Dispose для объекта более одного раза.</Description>
+   <Resolution Name="Default">Объект "{0}" можно удалять более одного раза в методе {1}. Чтобы избежать исключения System.ObjectDisposedException, следует вызывать метод "Dispose" для объекта только один раз.: Lines: 52</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="16.0.0.0" />
+  </Rule>
  </Rules>
  <Localized>
-  <String Key="Category">Category</String>
-  <String Key="Certainty">Certainty</String>
-  <String Key="CollapseAll">Collapse All</String>
-  <String Key="CheckId">Check Id</String>
-  <String Key="Error">Error</String>
-  <String Key="Errors">error(s)</String>
-  <String Key="ExpandAll">Expand All</String>
-  <String Key="Help">Help</String>
-  <String Key="Line">Line</String>
-  <String Key="Messages">message(s)</String>
-  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
-  <String Key="Project">Project</String>
-  <String Key="Resolution">Resolution</String>
-  <String Key="Rule">Rule</String>
-  <String Key="RuleFile">Rule File</String>
-  <String Key="RuleDescription">Rule Description</String>
-  <String Key="Source">Source</String>
-  <String Key="Status">Status</String>
-  <String Key="Target">Target</String>
-  <String Key="Warning">Warning</String>
-  <String Key="Warnings">warning(s)</String>
-  <String Key="ReportTitle">Code Analysis Report</String>
+  <String Key="Category">Категория</String>
+  <String Key="Certainty">Достоверность</String>
+  <String Key="CollapseAll">Свернуть все</String>
+  <String Key="CheckId">ИД проверки</String>
+  <String Key="Error">Ошибка</String>
+  <String Key="Errors">ошибки</String>
+  <String Key="ExpandAll">Развернуть все</String>
+  <String Key="Help">Справка</String>
+  <String Key="Line">Строка</String>
+  <String Key="Messages">сообщения</String>
+  <String Key="LocationNotStoredInPdb">[расположение не сохранено в PDB]</String>
+  <String Key="Project">Проект</String>
+  <String Key="Resolution">Разрешение</String>
+  <String Key="Rule">Правило</String>
+  <String Key="RuleFile">Файл правил</String>
+  <String Key="RuleDescription">Описание правила</String>
+  <String Key="Source">Источник</String>
+  <String Key="Status">Состояние</String>
+  <String Key="Target">Цель</String>
+  <String Key="Warning">Предупреждение</String>
+  <String Key="Warnings">предупреждения</String>
+  <String Key="ReportTitle">Отчет по Code Analysis</String>
  </Localized>
 </FxCopReport>

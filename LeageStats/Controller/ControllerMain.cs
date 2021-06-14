@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Controller
 {
+    /// <summary>
+    /// старый код  но это контроллер который проверят существует ли игрок в системе
+    /// </summary>
     public class ControllerMain
     {
 

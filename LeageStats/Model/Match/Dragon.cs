@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Model.Match
 {
-
+    /// <summary>
+    /// Ууу Дракон
+    /// </summary>
     public class Dragon
     {
-        public Dragon(
-            bool first,
-            int kills
-        )
+        public Dragon(bool first, int kills)
         {
             this.first = first;
             this.kills = kills;
         }
 
-        public bool first { get; }
-        public int kills { get; }
+        public bool first { get; set; }
+        public int kills { get; set; }
     }
+
 }

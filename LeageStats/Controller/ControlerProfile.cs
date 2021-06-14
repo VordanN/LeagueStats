@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Controller
 {
+    /// <summary>
+    /// старый код класс контроллер позволяет получать входы игры
+    /// </summary>
     public class ControlerProfile
     {
         public object GetContext()
@@ -40,19 +43,7 @@ namespace LeageStats.Controller
         public static LeagueEntryDTO GetPosition(string summoner)
         {
             League_V4 league = new League_V4(Constants.Summoner.Region);
-            try
-            {
-                var position = league.GetLeagueEntryDTOs(summoner).Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
-                return position ?? new LeagueEntryDTO();
-            }
-            catch (Exception)
-            {
-
-                throw new Exception("API Error(method GetPosition(SummonerDTO summoner))");
-            }
-
-
-
+            return league.GetLeagueEntryDTOs(summoner).Last();
         }
     }
 }

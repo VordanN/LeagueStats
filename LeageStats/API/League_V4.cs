@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace LeageStats.API
 {
+    /// <summary>
+    /// Класс который позволяет получать Входы в игру используя апи
+    /// </summary>
     public class League_V4 : API
     {
         public League_V4(string region) : base(region)

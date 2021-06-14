@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Model.Match
 {
+    /// <summary>
+    /// я заплуталяся но это связано с рунами хвыха
+    /// </summary>
     public class StatPerks
     {
-        public StatPerks(
-            int defense,
-            int flex,
-            int offense
-        )
+        public StatPerks(int defense, int flex, int offense)
         {
             this.defense = defense;
             this.flex = flex;
             this.offense = offense;
         }
 
-        public int defense { get; }
-        public int flex { get; }
-        public int offense { get; }
+        public int defense { get; set; }
+        public int flex { get; set; }
+        public int offense { get; set; }
     }
 }

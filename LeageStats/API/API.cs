@@ -1,13 +1,11 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Net.Http;
 
 namespace LeageStats.API
 {
+    /// <summary>
+    /// класс апи
+    /// </summary>
     public class API
     {
         private string Key { get; set; }
@@ -16,7 +14,15 @@ namespace LeageStats.API
         public API(string region)
         {
             Region = region;
-            Key = "RGAPI-d5847649-0b0d-4b2e-a0d8-d07768d377b1";
+            //так как апи роботает 24 часа
+            //всё плохзо
+            //но если зайти на сайт https://developer.riotgames.com
+            //войти в свой акк лиги
+            //потом нажать на себя (в правом верхнем углу) 
+            //после в DEVELOPMENT API KEY
+            //будет ключ его вставить сюди
+	    
+            Key = <"ключ API">;
         }
 
         protected HttpResponseMessage GET(string URL)
@@ -29,11 +35,11 @@ namespace LeageStats.API
             }
         }
 
-        protected string GetURL(string path,bool regionType = false,bool apitype = false)
+        protected string GetURL(string path, bool regionType = false, bool apitype = false)
         {
             if (regionType)
             {
-                if (Region.Contains("NA")|| Region.Contains("BR") || Region.Contains("LAN") || Region.Contains("LAS") || Region.Contains("OC"))
+                if (Region.Contains("NA") || Region.Contains("BR") || Region.Contains("LAN") || Region.Contains("LAS") || Region.Contains("OC"))
                 {
                     Region = "AMERICAS".ToLower();
                 }

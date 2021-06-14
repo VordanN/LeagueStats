@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 namespace LeageStats.Model.Match
 {
+    /// <summary>
+    /// иноформация о команде
+    /// </summary>
     public class Team
     {
-        public Team(
-            List<Ban> bans,
-            Objectives objectives,
-            int teamId,
-            bool win
-        )
+        public Team(List<Ban> bans, Objectives objectives, int teamId, bool win)
         {
             this.bans = bans;
             this.objectives = objectives;
@@ -20,10 +18,9 @@ namespace LeageStats.Model.Match
             this.win = win;
         }
 
-        public List<Ban> bans { get; }
-        public Objectives objectives { get; }
-        public int teamId { get; }
-        public bool win { get; }
+        public List<Ban> bans { get; set; }
+        public Objectives objectives { get; set; }
+        public int teamId { get; set; }
+        public bool win { get; set; }
     }
-
 }

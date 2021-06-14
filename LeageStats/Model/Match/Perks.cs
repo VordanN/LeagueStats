@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Model.Match
 {
+    /// <summary>
+    /// класс рун
+    /// </summary>
     public class Perks
     {
         public Perks(StatPerks statPerks, List<Style> styles)
@@ -15,8 +18,8 @@ namespace LeageStats.Model.Match
             this.styles = styles;
         }
 
-        public StatPerks statPerks { get; }
-        public List<Style> styles { get; }
+        public StatPerks statPerks { get; set; }
+        public List<Style> styles { get; set; }
     }
 
 }

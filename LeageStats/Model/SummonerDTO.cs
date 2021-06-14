@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LeageStats.API
 {
+    /// <summary>
+    /// Дто Игрока
+    /// </summary>
     public class SummonerDTO
     {
         public string Region { get; set; }

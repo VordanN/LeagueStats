@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LeageStats.Model
 {
+    /// <summary>
+    /// Дто Входа в игру
+    /// </summary>
     public class LeagueEntryDTO
     {
         public string LeagueId { get; set; }
@@ -26,9 +29,9 @@ namespace LeageStats.Model
     public class MiniSeriesDTO
     {
         public int Losses { get; set; }
-        public int Progress { get; set; }
+        public string Progress { get; set; }
         public int Target { get; set; }
-        public string Wins { get; set; }
+        public int Wins { get; set; }
     }
 
 }

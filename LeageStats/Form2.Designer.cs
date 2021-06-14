@@ -41,7 +41,6 @@ namespace LeageStats
             this.LLVL = new System.Windows.Forms.Label();
             this.SLvL = new System.Windows.Forms.Label();
             this.Losses = new System.Windows.Forms.Label();
-            this.Wins = new System.Windows.Forms.Label();
             this.ISLogo = new System.Windows.Forms.PictureBox();
             this.SName = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,7 +61,6 @@ namespace LeageStats
             this.panel1.Controls.Add(this.LLVL);
             this.panel1.Controls.Add(this.SLvL);
             this.panel1.Controls.Add(this.Losses);
-            this.panel1.Controls.Add(this.Wins);
             this.panel1.Controls.Add(this.ISLogo);
             this.panel1.Controls.Add(this.SName);
             resources.ApplyResources(this.panel1, "panel1");
@@ -151,12 +149,6 @@ namespace LeageStats
             this.Losses.Name = "Losses";
             this.Losses.Tag = "Losses";
             // 
-            // Wins
-            // 
-            resources.ApplyResources(this.Wins, "Wins");
-            this.Wins.Name = "Wins";
-            this.Wins.Tag = "Wins";
-            // 
             // ISLogo
             // 
             this.ISLogo.BackColor = System.Drawing.Color.Transparent;
@@ -208,7 +200,6 @@ namespace LeageStats
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
-            this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -225,7 +216,6 @@ namespace LeageStats
         private System.Windows.Forms.Label SLvL;
         private System.Windows.Forms.Label LLVL;
         private System.Windows.Forms.Label Losses;
-        private System.Windows.Forms.Label Wins;
         private System.Windows.Forms.Label SName;
         private System.Windows.Forms.PictureBox ISLogo;
         private System.Windows.Forms.PictureBox IRankImage;

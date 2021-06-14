@@ -2,21 +2,18 @@
 using LeageStats.API;
 using LeageStats.Controller;
 using LeageStats.Utilits;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Net;
 using System.Windows.Forms;
 namespace LeageStats
 {
     public partial class Form1 : Form
     {
-        readonly ControllerMain controller;
+        private readonly ControllerMain controller;
 
-        string SummonerRegion { get; set; }
-        string SummonerName { get; set; }
+        private string SummonerRegion { get; set; }
+        private string SummonerName { get; set; }
 
         public Form1()
         {
@@ -24,7 +21,7 @@ namespace LeageStats
             controller = new ControllerMain();
 
 
-            foreach (string summonerDIR in Directory.GetFiles(@"Info\Summoners\"))
+            foreach (string summonerDIR in Directory.GetFiles(@"Resurses\Info\Summoners\"))
             {
                 comboBox1.Items.Add(ReadWrite.ReadJson<SummonerDTO>(summonerDIR).Name);
             }
@@ -38,12 +35,18 @@ namespace LeageStats
             SummonerName = comboBox1.Text;
 
             if (string.IsNullOrEmpty(SummonerRegion) || string.IsNullOrEmpty(SummonerName))
+            {
                 return;
+            }
 
-            if (File.Exists(@"Info\Summoners\" + SummonerName + ".json"))
-                Constants.Summoner = ReadWrite.ReadJson<SummonerDTO>(@"Info\Summoners\" + SummonerName + ".json");
+            if (File.Exists(@"Resurses\Info\Summoners\" + SummonerName + ".json"))
+            {
+                Constants.Summoner = ReadWrite.ReadJson<SummonerDTO>(@"Resurses\Info\Summoners\" + SummonerName + ".json");
+            }
             else if (controller.GetSummener(SummonerRegion, SummonerName))
-                ReadWrite.WriteJson(Constants.Summoner, @"Info\Summoners\" + SummonerName + ".json");
+            {
+                ReadWrite.WriteJson(Constants.Summoner, @"Resurses\Info\Summoners\" + SummonerName + ".json");
+            }
             else
             {
                 MessageBox.Show("Not Found/API out of date", "EROR");
@@ -74,11 +77,11 @@ namespace LeageStats
             if (dragging)
             {
                 Point pointMoveTo;
-                pointMoveTo = this.PointToScreen(new Point(e.X, e.Y));
+                pointMoveTo = PointToScreen(new Point(e.X, e.Y));
 
                 pointMoveTo.Offset(-pointClicked.X, -pointClicked.Y);
 
-                this.Location = pointMoveTo;
+                Location = pointMoveTo;
             }
         }
         private void Button1_MouseUp(object sender, MouseEventArgs e)
