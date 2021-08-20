@@ -1,7 +1,5 @@
 # LeageStats
 
-это программа написанная на c# forms
+c# forms
 
-она использует открытый API Riot games
-
-чтобы получать информацию о игроке и матче
+ API Riot games
