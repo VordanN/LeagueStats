@@ -1,4 +1,4 @@
-# LeageStats
+# LeagueStats
 
 c# forms
 
